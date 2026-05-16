@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summer Offer: Your Online Sales System in 7 Days — Funa Digital Dubai</title>
+<meta name="description" content="Get your complete online sales system in 7 days. Website, social media, ads, WhatsApp and brand kit. AED 2,999 one-time payment.">
+<style>
+/* FULL ISOLATION - all styles scoped to #fl */
+#fl,#fl *,#fl *::before,#fl *::after{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;}
+#fl{display:block;background:#080808;color:#fff;line-height:1.6;overflow-x:hidden;}
+
+/* NAV */
+#fl-nav{position:fixed;top:0;left:0;right:0;z-index:99999;display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;background:rgba(8,8,8,0.97);border-bottom:1px solid rgba(255,255,255,0.07);}
+#fl-nav img{height:36px !important;width:auto !important;max-width:150px !important;display:block !important;}
+#fl-nav .ncta{background:#C8F135;color:#080808;font-weight:700;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 1.2rem;text-decoration:none;display:inline-block;white-space:nowrap;}
+#fl-nav .ncta:hover{background:#a8cc1a;}
+
+/* HERO */
+#fl-hero{padding:9rem 5% 5rem;background:#080808;position:relative;}
+.fl-badge{display:inline-block;background:#C8F135;color:#080808;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.85rem;margin-bottom:1.5rem;}
+#fl-hero h1{font-size:clamp(2.8rem,7vw,5.5rem);font-weight:900;line-height:0.95;text-transform:uppercase;margin-bottom:1.5rem;color:#fff;}
+#fl-hero h1 em{color:#C8F135;display:block;font-style:normal;}
+#fl-hero .sub{font-size:1rem;color:#bbb;margin-bottom:2rem;max-width:460px;line-height:1.75;}
+.price-row{display:flex;align-items:baseline;gap:0.4rem;margin-bottom:0.3rem;}
+.pcurr{font-size:1rem;font-weight:700;color:#C8F135;}
+.pamt{font-size:3.8rem;font-weight:900;color:#C8F135;line-height:1;}
+.pwas{font-size:0.95rem;color:#555;text-decoration:line-through;}
+.pnote{font-size:0.78rem;color:#888;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2rem;}
+.pnote b{color:#E63946;}
+.wa-btn{display:inline-flex;align-items:center;gap:0.6rem;background:#C8F135;color:#080808;font-weight:700;font-size:0.88rem;letter-spacing:0.05em;text-transform:uppercase;padding:0.9rem 1.6rem;text-decoration:none;vertical-align:middle;}
+.wa-btn:hover{background:#a8cc1a;}
+.wa-btn svg{width:18px;height:18px;fill:#080808;flex-shrink:0;}
+.ghost-btn{display:inline-flex;align-items:center;background:transparent;color:#fff;font-size:0.88rem;padding:0.9rem 1.2rem;border:1px solid rgba(255,255,255,0.2);text-decoration:none;margin-left:0.75rem;vertical-align:middle;}
+.ghost-btn:hover{border-color:#C8F135;color:#C8F135;}
+
+/* STATS */
+#fl-stats{padding:2.5rem 5%;background:#141414;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);}
+.sgrid{display:flex;justify-content:space-around;flex-wrap:wrap;gap:1.5rem;max-width:1100px;margin:0 auto;text-align:center;}
+.sn{font-size:2.5rem;font-weight:900;color:#C8F135;line-height:1;margin-bottom:0.2rem;}
+.sl{font-size:0.72rem;color:#888;text-transform:uppercase;letter-spacing:0.08em;}
+
+/* SECTIONS */
+.fl-sec{padding:4.5rem 5%;}
+.fl-sec.dark{background:#111;}
+.fl-sec.darker{background:#141414;}
+.fl-inner{max-width:1100px;margin:0 auto;}
+.sec-tag{font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#C8F135;margin-bottom:0.6rem;}
+.sec-h{font-size:clamp(1.8rem,4vw,3rem);font-weight:900;line-height:1.05;text-transform:uppercase;margin-bottom:1rem;color:#fff;}
+.sec-sub{font-size:0.92rem;color:#bbb;max-width:500px;line-height:1.75;margin-bottom:2.5rem;}
+
+/* CARDS GRID */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;margin-top:2rem;}
+.card{background:#1a1a1a;border:1px solid rgba(255,255,255,0.07);padding:1.75rem;transition:border-color 0.2s;}
+.card:hover{border-color:rgba(200,241,53,0.25);}
+.card-num{font-size:0.7rem;font-weight:700;color:#C8F135;letter-spacing:0.12em;margin-bottom:0.6rem;}
+.card-title{font-size:1.1rem;font-weight:800;text-transform:uppercase;margin-bottom:0.5rem;color:#fff;}
+.card-desc{font-size:0.85rem;color:#bbb;line-height:1.65;}
+.card ul{margin-top:0.75rem;list-style:none;}
+.card ul li{font-size:0.8rem;color:#bbb;padding:0.2rem 0;display:flex;align-items:flex-start;gap:0.4rem;}
+.card ul li::before{content:"✓";color:#C8F135;font-weight:700;flex-shrink:0;}
+
+/* JOURNEY */
+.jgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin-top:2rem;}
+.jcard{text-align:center;padding:1.5rem 1rem;background:#1a1a1a;border:1px solid rgba(255,255,255,0.07);position:relative;}
+.jstep{display:inline-block;background:#C8F135;color:#080808;font-size:0.58rem;font-weight:700;padding:0.15rem 0.5rem;letter-spacing:0.08em;margin-bottom:0.75rem;}
+.jicon{font-size:1.8rem;margin-bottom:0.6rem;}
+.jtitle{font-size:0.85rem;font-weight:700;text-transform:uppercase;color:#fff;margin-bottom:0.3rem;letter-spacing:0.04em;}
+.jdesc{font-size:0.75rem;color:#888;line-height:1.5;}
+.jresult{margin-top:2rem;background:#1a1a1a;border:1px solid rgba(200,241,53,0.2);border-top:3px solid #C8F135;padding:2rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
+.jrt h3{font-size:1.1rem;font-weight:800;text-transform:uppercase;color:#C8F135;margin-bottom:0.35rem;}
+.jrt p{font-size:0.85rem;color:#bbb;line-height:1.6;max-width:460px;}
+.jrnums{display:flex;gap:1.5rem;margin-left:auto;flex-wrap:wrap;}
+.jrn{text-align:center;}
+.jrn-v{font-size:1.6rem;font-weight:900;color:#C8F135;line-height:1;}
+.jrn-l{font-size:0.62rem;color:#888;text-transform:uppercase;letter-spacing:0.06em;}
+
+/* PROCESS */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;margin-top:2rem;}
+.pstep{padding:1.75rem;border-left:1px solid rgba(255,255,255,0.06);}
+.pstep:first-child{border-left:none;}
+.pnum{font-size:2.8rem;font-weight:900;color:rgba(255,255,255,0.04);line-height:1;margin-bottom:0.4rem;}
+.ptitle{font-size:0.72rem;font-weight:700;color:#C8F135;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem;}
+.pdesc{font-size:0.82rem;color:#bbb;line-height:1.6;}
+
+/* PRICING */
+#fl-pricing{text-align:center;}
+.pbox{max-width:660px;margin:2rem auto 0;background:#1a1a1a;border:1px solid rgba(200,241,53,0.2);border-top:4px solid #C8F135;padding:2.5rem;}
+.pbadge{display:inline-block;background:#C8F135;color:#080808;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.28rem 0.85rem;margin-bottom:1.25rem;}
+.pamt{font-size:4.5rem;font-weight:900;color:#C8F135;line-height:1;margin-bottom:0.2rem;}
+.pper{font-size:0.78rem;color:#888;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.5rem;}
+.phr{border:none;border-top:1px solid rgba(255,255,255,0.07);margin:1.25rem 0;}
+.pitems{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;text-align:left;margin-bottom:1.25rem;}
+.pitem{display:flex;align-items:center;gap:0.4rem;font-size:0.85rem;color:#bbb;}
+.pitem::before{content:"✓";color:#C8F135;font-weight:700;flex-shrink:0;}
+.pdel{background:rgba(200,241,53,0.07);border:1px solid rgba(200,241,53,0.15);padding:0.65rem;font-size:0.85rem;color:#C8F135;font-weight:600;margin-bottom:1.5rem;}
+.tamrow{display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:0.75rem;font-size:0.78rem;color:#888;}
+.tampill{background:#7C3AED;color:#fff;font-size:0.65rem;font-weight:700;padding:0.18rem 0.5rem;}
+
+/* TESTIMONIALS */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.2rem;margin-top:2rem;}
+.tcard{background:#1a1a1a;border:1px solid rgba(255,255,255,0.07);padding:1.5rem;}
+.tstars{color:#C8F135;margin-bottom:0.6rem;letter-spacing:0.05em;}
+.tquote{font-size:0.85rem;color:#bbb;line-height:1.7;font-style:italic;margin-bottom:1.1rem;}
+.tauthor{display:flex;align-items:center;gap:0.6rem;}
+.tav{width:34px;height:34px;background:rgba(200,241,53,0.1);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:#C8F135;flex-shrink:0;}
+.tname{font-weight:700;font-size:0.82rem;color:#fff;}
+.trole{font-size:0.72rem;color:#888;}
+
+/* FAQ */
+.flist{margin-top:2rem;max-width:700px;}
+.fitem{border-bottom:1px solid rgba(255,255,255,0.07);cursor:pointer;}
+.fq{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;font-weight:600;font-size:0.88rem;color:#fff;}
+.ficon{width:20px;height:20px;background:rgba(200,241,53,0.08);display:flex;align-items:center;justify-content:center;color:#C8F135;font-size:1rem;flex-shrink:0;transition:transform 0.2s;}
+.fitem.open .ficon{transform:rotate(45deg);}
+.fa{font-size:0.82rem;color:#bbb;line-height:1.7;max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s;}
+.fitem.open .fa{max-height:150px;padding-bottom:1.1rem;}
+
+/* FINAL CTA */
+#fl-cta{background:#080808;text-align:center;padding:5rem 5%;}
+#fl-cta h2{font-size:clamp(2.5rem,6vw,5rem);font-weight:900;text-transform:uppercase;line-height:0.95;margin-bottom:1rem;color:#fff;}
+#fl-cta h2 em{color:#C8F135;display:block;font-style:normal;}
+#fl-cta p{font-size:0.95rem;color:#bbb;margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.7;}
+
+/* FOOTER */
+#fl-footer{background:#141414;padding:1.5rem 5%;border-top:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;font-size:0.78rem;color:#666;}
+#fl-footer img{height:28px !important;width:auto !important;display:block !important;}
+#fl-footer a{color:#666;text-decoration:none;}
+#fl-footer a:hover{color:#C8F135;}
+
+/* WA FLOAT */
+#fl-wa{position:fixed;bottom:2rem;right:2rem;z-index:99999;width:54px;height:54px;background:#25D366;display:flex;align-items:center;justify-content:center;border-radius:50%;box-shadow:0 4px 18px rgba(37,211,102,0.35);text-decoration:none;}
+#fl-wa:hover{transform:scale(1.08);}
+#fl-wa svg{width:26px;height:26px;fill:white;}
+
+/* DIVIDER */
+.fldiv{border:none;border-top:1px solid rgba(255,255,255,0.05);margin:0;}
+
+@media(max-width:600px){
+  .pitems{grid-template-columns:1fr;}
+  .pgrid .pstep{border-left:none;border-top:1px solid rgba(255,255,255,0.06);}
+  .pgrid .pstep:first-child{border-top:none;}
+  .ghost-btn{margin-left:0;margin-top:0.75rem;display:flex;}
+  .jresult{flex-direction:column;}
+  .jrnums{margin-left:0;}
+}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#080808;">
+
+<div id="fl">
+
+<!-- NAV -->
+<div id="fl-nav">
+  <a href="https://www.funa.digital/"><img src="https://www.funa.digital/funalogo.png" alt="Funa Digital Marketing"></a>
+  <a href="https://wa.me/971502534188?text=Hi!%20Interested%20in%20Summer%20Offer%20AED%202999" class="ncta" target="_blank" rel="noopener">Get Started — AED 2,999</a>
+</div>
+
+<!-- HERO -->
+<div id="fl-hero">
+  <div class="fl-inner">
+    <div class="fl-badge">☀️ Summer Offer · Only 10 Spots</div>
+    <h1>Your Online<em>Sales System.</em></h1>
+    <p class="sub">We build your complete digital sales machine in 7 days — website, social media, ads, WhatsApp and brand kit. You focus on your business. We handle everything else.</p>
+    <div class="price-row"><span class="pcurr">AED</span><span class="pamt">2,999</span><span class="pwas">AED 5,500</span></div>
+    <p class="pnote">⚡ Offer ends <b>June 30, 2026</b> · Only 10 spots available</p>
+    <a href="https://wa.me/971502534188?text=Hi!%20Interested%20in%20Summer%20Offer%20AED%202999" class="wa-btn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Chat on WhatsApp
+    </a>
+    <a href="#fl-includes" class="ghost-btn">See what's included ↓</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<div id="fl-stats">
+  <div class="sgrid">
+    <div><div class="sn">15+</div><div class="sl">Years in Marketing</div></div>
+    <div><div class="sn">8+</div><div class="sl">Years as Agency</div></div>
+    <div><div class="sn">50+</div><div class="sl">Brands Scaled</div></div>
+    <div><div class="sn">2M+</div><div class="sl">Leads Generated</div></div>
+    <div><div class="sn">10X</div><div class="sl">Average ROAS</div></div>
+  </div>
+</div>
+
+<!-- INCLUDES -->
+<div id="fl-includes" class="fl-sec dark">
+  <div class="fl-inner">
+    <p class="sec-tag">What's included</p>
+    <h2 class="sec-h">5 systems. 1 price.<br>Ready in 7 days.</h2>
+    <p class="sec-sub">Everything your business needs to attract, convert and close customers online.</p>
+    <div class="cards">
+      <div class="card"><div class="card-num">01</div><div class="card-title">Premium Website</div><p class="card-desc">Fast, mobile-optimised and built to convert visitors into leads. SEO-ready from day one.</p><ul><li>Mobile-first responsive design</li><li>SEO optimised from launch</li><li>Lead capture forms included</li></ul></div>
+      <div class="card"><div class="card-num">02</div><div class="card-title">Social Media Setup</div><p class="card-desc">Instagram, Facebook and LinkedIn fully optimised. Bio, highlights, covers and first content batch.</p><ul><li>3 platforms configured</li><li>Brand-consistent visuals</li><li>First content batch included</li></ul></div>
+      <div class="card"><div class="card-num">03</div><div class="card-title">Ad Campaigns Setup</div><p class="card-desc">Meta Ads and Google Ads configured from scratch. Audiences, creatives and targeting all set.</p><ul><li>Meta Ads + Google Ads</li><li>Audience research & targeting</li><li>Ad creatives & copy included</li></ul></div>
+      <div class="card"><div class="card-num">04</div><div class="card-title">WhatsApp Integration</div><p class="card-desc">WhatsApp Business with automated welcome messages, quick replies and your catalogue.</p><ul><li>WhatsApp Business account</li><li>Automated welcome flow</li><li>Quick replies & catalogue</li></ul></div>
+      <div class="card"><div class="card-num">05</div><div class="card-title">Brand Positioning</div><p class="card-desc">Logo, colour palette, typography and full brand kit. Built to stand out in the Dubai market.</p><ul><li>Logo & colour palette</li><li>Typography system</li><li>Full brand guidelines</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<hr class="fldiv">
+
+<!-- JOURNEY -->
+<div id="fl-journey" class="fl-sec">
+  <div class="fl-inner">
+    <p class="sec-tag">How your customer finds you</p>
+    <h2 class="sec-h">From ad to sale —<br>the full journey.</h2>
+    <p class="sec-sub">How your online sales system turns a stranger into a paying customer — automatically.</p>
+    <div class="jgrid">
+      <div class="jcard"><div class="jstep">STEP 1</div><div class="jicon">📱</div><div class="jtitle">Sees Your Ad</div><p class="jdesc">Your Meta or Google ad stops the scroll. Bold creative, clear offer.</p></div>
+      <div class="jcard"><div class="jstep">STEP 2</div><div class="jicon">👀</div><div class="jtitle">Checks Your Profile</div><p class="jdesc">They visit your Instagram. Professional grid, clear bio — they're interested.</p></div>
+      <div class="jcard"><div class="jstep">STEP 3</div><div class="jicon">🌐</div><div class="jtitle">Visits Your Website</div><p class="jdesc">Fast, clear and convincing — answers every question they have.</p></div>
+      <div class="jcard"><div class="jstep">STEP 4</div><div class="jicon">💬</div><div class="jtitle">Messages on WhatsApp</div><p class="jdesc">Automated greeting fires instantly. The conversation begins.</p></div>
+      <div class="jcard"><div class="jstep">STEP 5</div><div class="jicon">💰</div><div class="jtitle">Pays & Becomes a Client</div><p class="jdesc">You close the sale. The system runs 24/7 — even while you sleep.</p></div>
+    </div>
+    <div class="jresult">
+      <div class="jrt"><h3>A system that sells while you work</h3><p>No more word of mouth or cold calling. Attract clients, build trust and close sales on WhatsApp — 24/7.</p></div>
+      <div class="jrnums"><div class="jrn"><div class="jrn-v">24/7</div><div class="jrn-l">Always on</div></div><div class="jrn"><div class="jrn-v">7d</div><div class="jrn-l">Ready in</div></div><div class="jrn"><div class="jrn-v">AED 2,999</div><div class="jrn-l">One price</div></div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="fldiv">
+
+<!-- PROCESS -->
+<div class="fl-sec darker">
+  <div class="fl-inner">
+    <p class="sec-tag">How it works</p>
+    <h2 class="sec-h">Ready in 7 days.</h2>
+    <div class="pgrid">
+      <div class="pstep"><div class="pnum">01</div><div class="ptitle">You contact us</div><p class="pdesc">Message us on WhatsApp. We send a short intake form — 5 minutes.</p></div>
+      <div class="pstep"><div class="pnum">02</div><div class="ptitle">We build</div><p class="pdesc">Our team starts immediately. Updates every 48 hours.</p></div>
+      <div class="pstep"><div class="pnum">03</div><div class="ptitle">You review</div><p class="pdesc">We send everything for approval. One full round of revisions included.</p></div>
+      <div class="pstep"><div class="pnum">04</div><div class="ptitle">We launch</div><p class="pdesc">Your complete system goes live. Ready to generate leads from day one.</p></div>
+    </div>
+  </div>
+</div>
+
+<hr class="fldiv">
+
+<!-- PRICING -->
+<div id="fl-pricing" class="fl-sec">
+  <div class="fl-inner">
+    <p class="sec-tag">Pricing</p>
+    <h2 class="sec-h">One price. Everything included.</h2>
+    <div class="pbox">
+      <div class="pbadge">☀️ Summer Offer 2026</div>
+      <div class="pamt">AED 2,999</div>
+      <div class="pper">One-time payment · No monthly fees · No hidden costs</div>
+      <hr class="phr">
+      <div class="pitems">
+        <div class="pitem">Premium website</div><div class="pitem">Social media setup</div>
+        <div class="pitem">Ad campaigns setup</div><div class="pitem">WhatsApp integration</div>
+        <div class="pitem">Brand positioning kit</div><div class="pitem">Delivered in 7 days</div>
+      </div>
+      <div class="pdel">⏱ Everything ready in <strong>7 days guaranteed</strong></div>
+      <a href="https://wa.me/971502534188?text=Hi!%20Interested%20in%20Summer%20Offer%20AED%202999" class="wa-btn" target="_blank" rel="noopener" style="display:inline-flex;margin-bottom:0.75rem;">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Claim Your Spot on WhatsApp
+      </a>
+      <div class="tamrow"><span>Or split with</span><span class="tampill">tamara</span><span>— interest free · 3 months</span></div>
+    </div>
+  </div>
+</div>
+
+<hr class="fldiv">
+
+<!-- TESTIMONIALS -->
+<div class="fl-sec dark">
+  <div class="fl-inner">
+    <p class="sec-tag">Client results</p>
+    <h2 class="sec-h">What our clients say.</h2>
+    <div class="tgrid">
+      <div class="tcard"><div class="tstars">★★★★★</div><p class="tquote">"Funa built our entire online presence in under a week. We went from zero to getting leads through WhatsApp the same day we launched."</p><div class="tauthor"><div class="tav">AK</div><div><div class="tname">Ahmed K.</div><div class="trole">Restaurant Owner, Dubai</div></div></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p class="tquote">"Best investment I made for my business. Professional, fast and they understand the Dubai market. My Meta ads were live within the week."</p><div class="tauthor"><div class="tav">SL</div><div><div class="tname">Sara L.</div><div class="trole">Fashion Brand Founder, UAE</div></div></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p class="tquote">"Complete system delivered in 7 days as promised. The WhatsApp integration alone changed how we handle enquiries. Highly recommend."</p><div class="tauthor"><div class="tav">MR</div><div><div class="tname">Marco R.</div><div class="trole">Real Estate Consultant, Dubai</div></div></div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="fldiv">
+
+<!-- FAQ -->
+<div class="fl-sec darker">
+  <div class="fl-inner">
+    <p class="sec-tag">Questions</p>
+    <h2 class="sec-h">Frequently asked.</h2>
+    <div class="flist">
+      <div class="fitem" onclick="this.classList.toggle('open')"><div class="fq"><span>Is this really everything in one package?</span><span class="ficon">+</span></div><div class="fa">Yes. Website, social media, ads setup, WhatsApp and brand kit — all in AED 2,999. No upsells, no surprises, no monthly fees.</div></div>
+      <div class="fitem" onclick="this.classList.toggle('open')"><div class="fq"><span>Do I need to provide anything?</span><span class="ficon">+</span></div><div class="fa">Just 5 minutes to fill our intake form. We write the copy, handle all design and configure everything. Logo if you have one — if not, we create it.</div></div>
+      <div class="fitem" onclick="this.classList.toggle('open')"><div class="fq"><span>Is the 7-day timeline guaranteed?</span><span class="ficon">+</span></div><div class="fa">Yes. The 7-day clock starts when we receive your completed intake form. We've delivered 50+ projects on time.</div></div>
+      <div class="fitem" onclick="this.classList.toggle('open')"><div class="fq"><span>Is the ad budget included?</span><span class="ficon">+</span></div><div class="fa">AED 2,999 covers the full setup. Ad spend goes directly to Meta and Google — separate and you control it completely.</div></div>
+      <div class="fitem" onclick="this.classList.toggle('open')"><div class="fq"><span>Can I pay in instalments?</span><span class="ficon">+</span></div><div class="fa">Yes. Cash, debit, card and Tamara for interest-free 3-month split payments — AED 1,000 per month.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div id="fl-cta">
+  <h2>DON'T WAIT.<em>START NOW.</em></h2>
+  <p>Only 10 spots at this price. Your complete online sales system — built and live in 7 days.</p>
+  <a href="https://wa.me/971502534188?text=Hi!%20Interested%20in%20Summer%20Offer%20AED%202999" class="wa-btn" target="_blank" rel="noopener" style="display:inline-flex;">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Claim Your Spot — WhatsApp
+  </a>
+</div>
+
+<!-- FOOTER -->
+<div id="fl-footer">
+  <a href="https://www.funa.digital/"><img src="https://www.funa.digital/funalogo.png" alt="Funa Digital"></a>
+  <span>© 2026 Funa Digital Marketing · Dubai, UAE</span>
+  <a href="https://www.funa.digital">← Back to funa.digital</a>
+</div>
+
+</div><!-- #fl -->
+
+<!-- WA FLOAT -->
+<a id="fl-wa" href="https://wa.me/971502534188?text=Hi!%20Interested%20in%20Summer%20Offer" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+</body>
+</html>
