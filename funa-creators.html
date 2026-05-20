@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creator Network — Funa Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --black: #080808; --lime: #c6ff00; --white: #f5f5f0;
+  --gray: #888; --card-bg: #111; --border: #222;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--white); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+  background: rgba(8,8,8,0.88); backdrop-filter: blur(14px);
+  border-bottom: 1px solid #1a1a1a;
+}
+.nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.06em; color: var(--white); text-decoration: none; }
+.nav-logo span { color: var(--lime); }
+.nav-cta { background: var(--lime); color: var(--black); font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 22px; border-radius: 6px; text-decoration: none; transition: opacity .15s; }
+.nav-cta:hover { opacity: .85; }
+
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem 2.5rem 4rem; position: relative; overflow: hidden; }
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: .35; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,1) 0%, rgba(8,8,8,.4) 55%, rgba(8,8,8,.15) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 960px; }
+.hero-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(198,255,0,.12); border: 1px solid rgba(198,255,0,.3); color: var(--lime); font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 1.5rem; }
+.hero-pill::before { content: ''; width: 7px; height: 7px; background: var(--lime); border-radius: 50%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:.3} }
+.hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(60px,11vw,150px); line-height: .93; letter-spacing: .01em; text-transform: uppercase; margin-bottom: 1.5rem; }
+.hero-title .accent { color: var(--lime); }
+.hero-sub { font-size: 17px; color: #aaa; line-height: 1.65; max-width: 520px; margin-bottom: 2.5rem; }
+.hero-actions { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+.btn-primary { background: var(--lime); color: var(--black); font-weight: 700; font-size: 14px; letter-spacing: .07em; text-transform: uppercase; padding: 14px 28px; border-radius: 7px; text-decoration: none; transition: opacity .15s; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; display: inline-block; }
+.btn-primary:hover { opacity: .85; }
+.btn-ghost { color: #888; font-size: 14px; font-weight: 500; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color .15s; }
+.btn-ghost:hover { color: var(--white); }
+.btn-ghost::after { content: '↓'; }
+.hero-stats { display: flex; gap: 2.5rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #1e1e1e; flex-wrap: wrap; }
+.stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--lime); letter-spacing: .03em; }
+.stat-label { font-size: 12px; color: #555; text-transform: uppercase; letter-spacing: .08em; margin-top: 2px; }
+
+.marquee-section { padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; }
+.marquee-track { display: flex; gap: 2.5rem; width: max-content; animation: marquee 30s linear infinite; }
+.marquee-track span { font-family: 'Bebas Neue', sans-serif; font-size: 15px; letter-spacing: .1em; color: #333; white-space: nowrap; }
+.marquee-track .dot { color: var(--lime); }
+@keyframes marquee { from{transform:translateX(0)}to{transform:translateX(-50%)} }
+
+section { padding: 5rem 2.5rem; }
+.section-label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--lime); margin-bottom: .75rem; }
+.section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(38px,5.5vw,68px); line-height: .95; text-transform: uppercase; margin-bottom: 1.25rem; }
+.section-sub { font-size: 16px; color: #777; line-height: 1.65; max-width: 560px; }
+
+/* TYPES GRID */
+.types-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-top: 3.5rem; }
+.type-card { background: var(--card-bg); position: relative; overflow: hidden; cursor: pointer; transition: background .3s; }
+.type-card:hover { background: #161616; }
+.type-card-media { width: 100%; aspect-ratio: 16/10; position: relative; overflow: hidden; }
+.type-card-media video, .type-card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; filter: brightness(.65) saturate(.8); }
+.type-card:hover .type-card-media video,
+.type-card:hover .type-card-media img { transform: scale(1.05); filter: brightness(.5) saturate(1.1); }
+.type-card-body { padding: 1.4rem 1.5rem 1.6rem; }
+.type-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; background: rgba(198,255,0,.08); color: var(--lime); border: 1px solid rgba(198,255,0,.2); padding: 4px 10px; border-radius: 4px; margin-bottom: .7rem; }
+.type-card-name { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: .02em; line-height: 1; margin-bottom: .45rem; }
+.type-card-desc { font-size: 13.5px; color: #666; line-height: 1.6; margin-bottom: .9rem; }
+.type-card-meta { display: flex; flex-wrap: wrap; gap: 5px; }
+.meta-pill { background: #1a1a1a; border: 1px solid #2a2a2a; font-size: 11px; color: #777; font-weight: 500; padding: 3px 9px; border-radius: 100px; }
+
+/* HIGHLIGHT card (gifted / disruptive) */
+.type-card.highlight { background: #0f1200; }
+.type-card.highlight .type-tag { background: rgba(198,255,0,.15); border-color: rgba(198,255,0,.4); }
+.type-card.highlight .type-card-name { color: var(--lime); }
+
+/* HOW */
+.how-section { background: #0d0d0d; }
+.steps-list { margin-top: 3.5rem; }
+.step-row { display: grid; grid-template-columns: 72px 1fr; gap: 2rem; align-items: start; padding: 2rem 0; border-bottom: 1px solid #1a1a1a; }
+.step-row:last-child { border-bottom: none; }
+.step-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: #232323; line-height: 1; }
+.step-title-text { font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: .03em; margin-bottom: .35rem; }
+.step-desc { font-size: 14.5px; color: #666; line-height: 1.65; }
+
+/* PROOF */
+.proof-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; margin-top: 3rem; }
+.proof-card { background: #111; border: 1px solid #1e1e1e; border-radius: 12px; padding: 1.5rem; }
+.proof-stars { color: var(--lime); font-size: 13px; margin-bottom: .7rem; letter-spacing: 2px; }
+.proof-text { font-size: 14px; color: #888; line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
+.proof-author { display: flex; align-items: center; gap: 10px; }
+.proof-avatar { width: 34px; height: 34px; border-radius: 50%; background: #1e1e1e; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: var(--lime); flex-shrink: 0; }
+.proof-name { font-size: 13px; font-weight: 600; }
+.proof-handle { font-size: 11px; color: #555; }
+
+/* FORM */
+.form-section { background: var(--lime); color: var(--black); }
+.form-section .section-label { color: rgba(0,0,0,.45); }
+.form-section .section-title { color: var(--black); }
+.form-section .section-sub { color: rgba(0,0,0,.55); }
+.form-wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; align-items: start; margin-top: 3.5rem; }
+.form-perks { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+.form-perk { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: rgba(0,0,0,.65); line-height: 1.5; }
+.form-perk::before { content: '✓'; font-weight: 700; font-size: 13px; margin-top: 2px; flex-shrink: 0; }
+.apply-form { display: flex; flex-direction: column; gap: 11px; }
+.field { display: flex; flex-direction: column; gap: 5px; }
+.field label { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(0,0,0,.45); }
+.field input, .field select, .field textarea { background: rgba(0,0,0,.07); border: 1.5px solid rgba(0,0,0,.12); border-radius: 8px; padding: 12px 14px; font-size: 15px; font-family: 'DM Sans', sans-serif; color: var(--black); outline: none; transition: border .2s; }
+.field input::placeholder, .field textarea::placeholder { color: rgba(0,0,0,.3); }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: rgba(0,0,0,.4); }
+.field select option { background: #fff; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+.submit-btn { background: var(--black); color: var(--lime); border: none; border-radius: 8px; padding: 15px; font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: .08em; cursor: pointer; transition: opacity .15s; margin-top: 6px; width: 100%; }
+.submit-btn:hover { opacity: .85; }
+.submit-btn:disabled { opacity: .5; cursor: not-allowed; }
+.form-success { display: none; text-align: center; padding: 3rem 1rem; }
+.form-success.show { display: block; }
+.success-big { font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: 1; color: var(--black); margin-bottom: 1rem; }
+
+footer { background: var(--black); border-top: 1px solid #1a1a1a; padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: .06em; }
+.footer-logo span { color: var(--lime); }
+footer p { font-size: 13px; color: #444; }
+
+.status-msg { font-size: 13px; margin-top: 8px; min-height: 18px; color: rgba(0,0,0,.6); }
+.status-msg.error { color: #a00; }
+
+@media(max-width:768px){
+  nav { padding: 1rem 1.25rem; }
+  .hero { padding: 1.5rem 1.25rem 3rem; }
+  section { padding: 3.5rem 1.25rem; }
+  .form-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+  .step-row { grid-template-columns: 48px 1fr; gap: 1rem; }
+  .hero-stats { gap: 1.5rem; }
+}
+
+.fade-in { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
+.fade-in.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://www.funa.digital" class="nav-logo">FUNA <span>DIGITAL</span></a>
+  <a href="#apply" class="nav-cta">Apply Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline
+    src="https://videos.pexels.com/video-files/6804087/6804087-uhd_2560_1440_25fps.mp4"
+    poster="https://images.pexels.com/photos/7605172/pexels-photo-7605172.jpeg?auto=compress&w=1200">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-pill">Now recruiting · Dubai & UAE</div>
+    <h1 class="hero-title">CREATE.<br><span class="accent">COLLAB.</span><br>GET PAID.</h1>
+    <p class="hero-sub">Funa Digital connects the UAE's best creators — from nano to macro, gifted to paid — with the fastest-growing brands in Dubai and the GCC.</p>
+    <div class="hero-actions">
+      <a href="#apply" class="btn-primary">Join the Network</a>
+      <a href="#types" class="btn-ghost">See who we're looking for</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">50+</div><div class="stat-label">Brand clients</div></div>
+      <div><div class="stat-num">12</div><div class="stat-label">Industries</div></div>
+      <div><div class="stat-num">UAE</div><div class="stat-label">GCC focused</div></div>
+      <div><div class="stat-num">48H</div><div class="stat-label">Response time</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span>UGC CREATOR</span><span class="dot">✦</span><span>TIKTOKER</span><span class="dot">✦</span><span>YOUTUBER</span><span class="dot">✦</span><span>MICROINFLUENCER</span><span class="dot">✦</span><span>BRAND AMBASSADOR</span><span class="dot">✦</span><span>GIFTED CREATOR</span><span class="dot">✦</span><span>FACELESS CREATOR</span><span class="dot">✦</span><span>LINKEDIN CREATOR</span><span class="dot">✦</span><span>EGC CREATOR</span><span class="dot">✦</span><span>AI CREATOR</span><span class="dot">✦</span><span>CONTENT CREATOR</span><span class="dot">✦</span><span>NICHE CREATOR</span><span class="dot">✦</span>
+    <span>UGC CREATOR</span><span class="dot">✦</span><span>TIKTOKER</span><span class="dot">✦</span><span>YOUTUBER</span><span class="dot">✦</span><span>MICROINFLUENCER</span><span class="dot">✦</span><span>BRAND AMBASSADOR</span><span class="dot">✦</span><span>GIFTED CREATOR</span><span class="dot">✦</span><span>FACELESS CREATOR</span><span class="dot">✦</span><span>LINKEDIN CREATOR</span><span class="dot">✦</span><span>EGC CREATOR</span><span class="dot">✦</span><span>AI CREATOR</span><span class="dot">✦</span><span>CONTENT CREATOR</span><span class="dot">✦</span><span>NICHE CREATOR</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- TYPES -->
+<section id="types">
+  <div class="section-label">Who we're looking for</div>
+  <h2 class="section-title">FIND YOUR<br>CATEGORY.</h2>
+  <p class="section-sub">From gifted collabs to six-figure ambassador deals — every level has a place in our network. Real people, real content, real results.</p>
+
+  <div class="types-grid">
+
+    <div class="type-card highlight fade-in">
+      <div class="type-card-media">
+        <img src="https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&w=600&h=375&fit=crop" alt="Gifted Creator">
+      </div>
+      <div class="type-card-body">
+        <div class="type-tag">🆕 Just starting out</div>
+        <div class="type-card-name">GIFTED CREATOR</div>
+        <div class="type-card-desc">Zero followers? No problem. You collaborate in exchange for free products, experiences, or portfolio content. The best way to start — and brands love the authenticity.</div>
+        <div class="type-card-meta">
+          <span class="meta-pill">0 followers OK</span><span class="meta-pill">Product gifting</span><span class="meta-pill">Portfolio builder</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-card fade-in">
+      <div class="type-card-media">
+        <video autoplay muted loop playsinline>
+          <source src="https://videos.pexels.com/video-files/8378570/8378570-hd_1280_720_30fps.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="type-card-body">
+        <div class="type-tag">UGC Creator</div>
+        <div class="type-card-name">UGC CREATOR</div>
+        <div class="type-card-desc">You create authentic product content — unboxings, reviews, demos — that brands use directly in their ads. No big following needed, just great content.</div>
+        <div class="type-card-meta">
+          <span class="meta-pill">From 0 followers</span><span class="meta-pill">Per-video payment</span><span class="meta-pill">Ad-ready content</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-card fade-in">
+      <div class="type-card-media">
+        <video autoplay muted loop playsinline>
+          <source src="https://videos.pexels.com/video-files/6476783/6476783-hd_1280_720_30fps.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="type-card-body">
+        <div class="type-tag">TikToker</div>
+        <div class="type-card-name">TIKTOKER</div>
+        <div class="type-card-desc">Short-form video is king. If you create content on TikTok for a Dubai or UAE audience, brands in F&B, fashion, and lifestyle are actively looking for you right now.</div>
+        <div class="type-card-meta">
+          <span class="meta-pill">TikTok native</span><span class="meta-pill">Reels crosspost</span><span class="meta-pill">UAE audience</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-card fade-in">
+      <div class="type-card-media">
+        <img src="https://images.pexels.com/photos/4009402/pexels-photo-4009402.jpeg?auto=compress&w=600&h=375&fit=crop" alt="YouTuber">
+      </div>
+      <div class="type-card-body">
+        <div class="type-tag">YouTuber</div>
+        <div class="type-card-name">YOUTUBER</div>
+        <div class="type-card-desc">Long-form reviews, vlogs, tutorials. YouTube creators in the UAE command premium brand deals — especially in tech, luxury, real estate, and automotive.</div>
+        <div class="type-card-meta">
+          <span class="meta-pill">Long-form video</span><span class="meta-pill">Premium deals</span><span class="meta-pill">Evergreen content</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-card fade-in">
+      <div class="type-card-media">
+        <img src="https://images.pexels.com/photos/7605172/pexels-photo-7605172.jpeg?auto=compress&w=600&h=375&fit=crop" alt="Microinfluencer">
+      </div>
+      <div class="type-card-body">
+        <div class="type-tag">Microinfluencer</div>
+        <div class="type-card-name">MICRO­INFLUENCER</div>
+        <div class="type-card-desc">1K–50K highly engaged followers. Your community trusts you. Brands love micro creators because your audience converts better than accounts 10x your size.</div>
+        <div class="type-card-meta">
+          <span class="meta-pill">1K – 50K</span><span class="meta-pill">High engagement</span><span class="meta-pill">Paid collabs</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-card fade-in">
+      <div class="type-card-media">
+        <video autoplay muted loop playsinline>
+          <source src="https://videos.pexels.com/video-files/7710262/7710262-hd_1280_720_30fps.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="type-card-body">
+        <div class="type-tag">Influencer</div>
+        <div class="type-card-name">INFLUENCER</div>
+        <div class="type-card-desc">50K+ followers on IG, TikTok, or YouTube. You shape purchasing decisions in Dubai. We connect you with top brands looking for real reach and authentic voice.</div>
+        <div class="type-card-meta">
+          <span class="meta-pill">50K+ followers</span><span class="meta-pill">Premium campaigns</span><span class="meta-pill">Long-term deals</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-card fade-in">
+      <div class="type-card-media">
+        <img src="https://images.pexels.com/photos/3153204/pexels-photo-3153204.jpeg?auto=compress&w=600&h=375&fit=crop" alt="Brand Ambassador">
+      </div>
+      <div class="type-card-body">
+        <div class="type-tag">Brand Ambassador</div>
+        <div class="type-card-name">BRAND AMBASSADOR</div>
+        <div class="type-card-desc">Events, retainer posts, exclusive partnerships. The face of a brand in the UAE over months. The most premium deal type — ongoing income, full brand alignment.</div>
+        <div class="type-card-meta">
+          <span class="meta-pill">Retainer model</span><span class="meta-pill">Event appearances</span><span class="meta-pill">Exclusive deal</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-card highlight fade-in">
+      <div class="type-card-media">
+        <img src="https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg?auto=compress&w=600&h=375&fit=crop" alt="Faceless Creator">
+      </div>
+      <div class="type-card-body">
+        <div class="type-tag">🔥 Trending now</div>
+        <div class="type-card-name">FACELESS CREATOR</div>
+        <div class="type-card-desc">No face, no problem. Voice-over, hands-only, text-on-screen. Faceless accounts are exploding on TikTok and YouTube. Privacy-first and massively scalable.</div>
+        <div class="type-card-meta">
+          <span class="meta-pill">Anonymous</span><span class="meta-pill">Scalable</span><span class="meta-pill">Voice / text content</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-card highlight fade-in">
+      <div class="type-card-media">
+        <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&w=600&h=375&fit=crop" alt="LinkedIn Creator">
+      </div>
+      <div class="type-card-body">
+        <div class="type-tag">🔥 B2B exploding</div>
+        <div class="type-card-name">LINKEDIN CREATOR</div>
+        <div class="type-card-desc">Executives, consultants, founders who create thought leadership content. B2B influencer marketing in the GCC is at peak demand — and almost nobody is doing it right.</div>
+        <div class="type-card-meta">
+          <span class="meta-pill">B2B brands</span><span class="meta-pill">Premium rates</span><span class="meta-pill">GCC focus</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-card highlight fade-in">
+      <div class="type-card-media">
+        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&w=600&h=375&fit=crop" alt="EGC Creator">
+      </div>
+      <div class="type-card-body">
+        <div class="type-tag">🔥 Disruptive</div>
+        <div class="type-card-name">EGC CREATOR</div>
+        <div class="type-card-desc">Employee-Generated Content. You create content from inside a brand — authentic, behind-the-scenes, human. The most trusted content format of 2025. Companies are paying for it.</div>
+        <div class="type-card-meta">
+          <span class="meta-pill">Behind-the-scenes</span><span class="meta-pill">Brand trust</span><span class="meta-pill">Paid by companies</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-card fade-in">
+      <div class="type-card-media">
+        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&w=600&h=375&fit=crop" alt="Niche Creator">
+      </div>
+      <div class="type-card-body">
+        <div class="type-tag">Niche Creator</div>
+        <div class="type-card-name">NICHE CREATOR</div>
+        <div class="type-card-desc">F&B, real estate, fitness, luxury cars, parenting, finance. Own a niche in the UAE and brands will pay premium for your specific, loyal audience.</div>
+        <div class="type-card-meta">
+          <span class="meta-pill">Any niche</span><span class="meta-pill">Targeted audience</span><span class="meta-pill">Premium rates</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-card highlight fade-in">
+      <div class="type-card-media">
+        <img src="https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&w=600&h=375&fit=crop" alt="AI Creator">
+      </div>
+      <div class="type-card-body">
+        <div class="type-tag">🤖 Next level</div>
+        <div class="type-card-name">AI-ASSISTED CREATOR</div>
+        <div class="type-card-desc">You use AI tools to scale your output — more videos, multiple languages, faster turnaround. The next generation of content creation is here and brands want in.</div>
+        <div class="type-card-meta">
+          <span class="meta-pill">AI-powered</span><span class="meta-pill">High output</span><span class="meta-pill">Multi-language</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="section-label">The process</div>
+  <h2 class="section-title">HOW IT<br>WORKS.</h2>
+  <p class="section-sub">Simple, transparent, built for creators who value their time.</p>
+  <div class="steps-list">
+    <div class="step-row fade-in">
+      <div class="step-num">01</div>
+      <div class="step-body">
+        <div class="step-title-text">Apply in 5 minutes</div>
+        <div class="step-desc">Fill out your creator profile — platforms, niche, rates, and portfolio. Quick and painless. We need the essentials to match you with the right brands.</div>
+      </div>
+    </div>
+    <div class="step-row fade-in">
+      <div class="step-num">02</div>
+      <div class="step-body">
+        <div class="step-title-text">We review your profile</div>
+        <div class="step-desc">Our team reviews every application within 48 hours. We look for quality, authenticity, and UAE-relevant content — not just follower counts.</div>
+      </div>
+    </div>
+    <div class="step-row fade-in">
+      <div class="step-num">03</div>
+      <div class="step-body">
+        <div class="step-title-text">Get matched with brands</div>
+        <div class="step-desc">When a brand campaign matches your profile, we reach out via WhatsApp. You choose which collabs you want — you're always in control.</div>
+      </div>
+    </div>
+    <div class="step-row fade-in">
+      <div class="step-num">04</div>
+      <div class="step-body">
+        <div class="step-title-text">Create, post, get paid</div>
+        <div class="step-desc">Brief received. Content created. Content approved. Payment sent. No chasing invoices — we handle everything between you and the brand.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section>
+  <div class="section-label">Creator voices</div>
+  <h2 class="section-title">WHAT CREATORS<br>SAY.</h2>
+  <div class="proof-grid">
+    <div class="proof-card fade-in">
+      <div class="proof-stars">★★★★★</div>
+      <div class="proof-text">"Funa matched me with 3 Dubai F&B brands in my first month. I finally got paid what my content is actually worth."</div>
+      <div class="proof-author"><div class="proof-avatar">LM</div><div><div class="proof-name">Layla M.</div><div class="proof-handle">@laylaeatsdubai · 22K followers</div></div></div>
+    </div>
+    <div class="proof-card fade-in">
+      <div class="proof-stars">★★★★★</div>
+      <div class="proof-text">"As a UGC creator with zero following I thought I had nothing to offer. I've done 8 paid campaigns in 4 months through Funa."</div>
+      <div class="proof-author"><div class="proof-avatar">AK</div><div><div class="proof-name">Ahmed K.</div><div class="proof-handle">UGC Creator · Dubai</div></div></div>
+    </div>
+    <div class="proof-card fade-in">
+      <div class="proof-stars">★★★★★</div>
+      <div class="proof-text">"Got a 6-month brand ambassador deal with a luxury real estate developer. This is exactly what I was looking for in the UAE market."</div>
+      <div class="proof-author"><div class="proof-avatar">SR</div><div><div class="proof-name">Sofia R.</div><div class="proof-handle">@sofiainuae · 87K followers</div></div></div>
+    </div>
+    <div class="proof-card fade-in">
+      <div class="proof-stars">★★★★★</div>
+      <div class="proof-text">"I started as a gifted creator — free collabs only. Six months later I'm doing paid campaigns with 3 brands. Best decision I made."</div>
+      <div class="proof-author"><div class="proof-avatar">NJ</div><div><div class="proof-name">Nour J.</div><div class="proof-handle">Gifted → Paid Creator · Abu Dhabi</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY FORM -->
+<section class="form-section" id="apply">
+  <div class="section-label">Join the network</div>
+  <h2 class="section-title">READY TO<br>GET STARTED?</h2>
+  <p class="section-sub">Apply in 5 minutes. All levels welcome — from gifted collabs to paid campaigns.</p>
+
+  <div class="form-wrap">
+    <div>
+      <ul class="form-perks">
+        <li class="form-perk">All creator types welcome — gifted, UGC, micro, macro, ambassador</li>
+        <li class="form-perk">Access to 50+ Dubai and GCC brands actively seeking creators</li>
+        <li class="form-perk">We handle negotiations, contracts, and payments — you create</li>
+        <li class="form-perk">Open to all niches: F&B, luxury, real estate, fashion, fitness, tech, B2B</li>
+        <li class="form-perk">TikTokers, YouTubers, Instagram, LinkedIn, Faceless — all platforms</li>
+        <li class="form-perk">Paid in AED with clear timelines. No invoice chasing, ever.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="apply-form" id="applyForm">
+        <div class="field-row">
+          <div class="field"><label>First name</label><input type="text" id="f_fname" placeholder="Sara" required></div>
+          <div class="field"><label>Last name</label><input type="text" id="f_lname" placeholder="Al Mansouri"></div>
+        </div>
+        <div class="field"><label>Email</label><input type="email" id="f_email" placeholder="sara@email.com" required></div>
+        <div class="field"><label>WhatsApp</label><input type="tel" id="f_phone" placeholder="+971 50 000 0000"></div>
+        <div class="field">
+          <label>Creator type</label>
+          <select id="f_type">
+            <option value="">Select your type...</option>
+            <option>Gifted Creator (starting out, open to free collabs)</option>
+            <option>UGC Creator</option>
+            <option>TikToker</option>
+            <option>YouTuber</option>
+            <option>Microinfluencer (1K–50K)</option>
+            <option>Influencer (50K+)</option>
+            <option>Brand Ambassador</option>
+            <option>Faceless Creator</option>
+            <option>LinkedIn / B2B Creator</option>
+            <option>EGC Creator</option>
+            <option>AI-Assisted Creator</option>
+            <option>Niche Creator</option>
+            <option>Content Creator / Photographer</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Main platform</label>
+          <select id="f_platform">
+            <option value="">Select platform...</option>
+            <option>Instagram</option>
+            <option>TikTok</option>
+            <option>YouTube</option>
+            <option>LinkedIn</option>
+            <option>Multiple platforms</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field-row">
+          <div class="field"><label>Handle / @username</label><input type="text" id="f_handle" placeholder="@yourhandle"></div>
+          <div class="field"><label>Followers (approx)</label><input type="text" id="f_followers" placeholder="e.g. 12K"></div>
+        </div>
+        <div class="field"><label>Niche / content category</label><input type="text" id="f_niche" placeholder="e.g. F&B, Lifestyle, Real Estate..."></div>
+        <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">APPLY NOW →</button>
+        <div class="status-msg" id="statusMsg"></div>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="success-big">APPLICATION<br>RECEIVED.</div>
+        <p style="font-size:16px;color:rgba(0,0,0,.6);line-height:1.6;margin-top:.75rem;">We'll review your profile and reach out via WhatsApp within 48 hours.<br>Welcome to the Funa Creator Network.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">FUNA <span>DIGITAL</span></div>
+  <p>© 2026 Funa Digital Marketing. Dubai, UAE.</p>
+  <a href="https://www.funa.digital" style="font-size:13px;color:#444;text-decoration:none;">www.funa.digital</a>
+</footer>
+
+<script>
+// Scroll fade-in
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+
+// Form submit — posts to Google Apps Script webhook
+async function handleSubmit() {
+  const btn = document.getElementById('submitBtn');
+  const msg = document.getElementById('statusMsg');
+  const fname = document.getElementById('f_fname').value.trim();
+  const email = document.getElementById('f_email').value.trim();
+
+  if (!fname || !email) {
+    msg.textContent = 'Please enter your name and email.';
+    msg.className = 'status-msg error';
+    return;
+  }
+
+  const payload = {
+    timestamp: new Date().toISOString(),
+    first_name: fname,
+    last_name: document.getElementById('f_lname').value.trim(),
+    email: email,
+    whatsapp: document.getElementById('f_phone').value.trim(),
+    creator_type: document.getElementById('f_type').value,
+    platform: document.getElementById('f_platform').value,
+    handle: document.getElementById('f_handle').value.trim(),
+    followers: document.getElementById('f_followers').value.trim(),
+    niche: document.getElementById('f_niche').value.trim(),
+  };
+
+  btn.disabled = true;
+  btn.textContent = 'SENDING...';
+  msg.textContent = '';
+
+  // ⚠️ Replace APPS_SCRIPT_URL with your Google Apps Script Web App URL
+  const APPS_SCRIPT_URL = 'APPS_SCRIPT_URL_HERE';
+
+  try {
+    await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    document.getElementById('applyForm').style.display = 'none';
+    document.getElementById('formSuccess').classList.add('show');
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = 'APPLY NOW →';
+    msg.textContent = 'Something went wrong. Please try again.';
+    msg.className = 'status-msg error';
+  }
+}
+</script>
+</body>
+</html>
