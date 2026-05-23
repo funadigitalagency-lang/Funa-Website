@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Market a DeFi Protocol to Non-Technical Users in 2026 | Funa</title>
+<meta name="description" content="DeFi marketing for mainstream adoption — how to explain complex protocols in plain language, build trust with non-technical audiences, and grow TVL beyond the crypto-native crowd.">
+<meta name="keywords" content="DeFi marketing non-technical users, DeFi protocol marketing 2026, decentralized finance user acquisition, DeFi brand strategy, DeFi content marketing, grow DeFi protocol users">
+<link rel="canonical" href="https://www.funa.digital/blog/defi-protocol-marketing-non-technical">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{--neon:#C8FF00;--bg:#080808;--bg2:#0f0f0f;--bg3:#161616;--border:rgba(200,255,0,0.15);--text:#e8e8e8;--text-muted:#888;--white:#ffffff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;line-height:1.7;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,8,0.95);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px;backdrop-filter:blur(10px);}
+  .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--neon);letter-spacing:2px;text-decoration:none;}
+  .nav-links{display:flex;gap:32px;list-style:none;}
+  .nav-links a{color:var(--text-muted);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:color .2s;}
+  .nav-links a:hover{color:var(--neon);}
+  .nav-cta{background:var(--neon);color:#000;padding:10px 24px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px;text-decoration:none;}
+  .article-hero{padding:140px 0 80px;background:linear-gradient(180deg,#00080f 0%,var(--bg) 100%);position:relative;overflow:hidden;}
+  .article-hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(200,255,0,0.06) 0%,transparent 70%);}
+  .container{max-width:820px;margin:0 auto;padding:0 40px;}
+  .container-wide{max-width:1100px;margin:0 auto;padding:0 40px;}
+  .tag{display:inline-block;padding:4px 14px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:1px solid var(--border);color:var(--neon);margin:0 6px 6px 0;}
+  .article-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);line-height:0.95;color:var(--white);letter-spacing:1px;margin:24px 0 28px;}
+  .article-title span{color:var(--neon);}
+  .article-subtitle{font-size:20px;color:var(--text-muted);font-weight:300;line-height:1.6;margin-bottom:40px;max-width:680px;}
+  .article-meta{display:flex;align-items:center;gap:32px;padding:24px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+  .author-avatar{width:44px;height:44px;background:var(--neon);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:18px;color:#000;}
+  .meta-author{display:flex;align-items:center;gap:12px;}
+  .author-name{font-weight:600;font-size:14px;color:var(--white);}
+  .author-role{font-size:12px;color:var(--text-muted);}
+  .meta-details{display:flex;gap:24px;margin-left:auto;}
+  .meta-item{font-size:12px;color:var(--text-muted);}
+  .meta-item strong{color:var(--text);}
+  .article-body{padding:80px 0;}
+  .article-body h2{font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--white);letter-spacing:1px;margin:60px 0 20px;line-height:1;}
+  .article-body h2:first-child{margin-top:0;}
+  .article-body h3{font-size:20px;font-weight:700;color:var(--neon);margin:36px 0 14px;}
+  .article-body p{font-size:17px;color:var(--text);margin-bottom:24px;line-height:1.8;}
+  .article-body strong{color:var(--white);font-weight:600;}
+  .callout{background:var(--bg3);border-left:3px solid var(--neon);padding:28px 32px;margin:40px 0;}
+  .callout p{margin:0;font-size:18px;font-style:italic;color:var(--white);font-weight:300;}
+  .callout strong{color:var(--neon);font-style:normal;}
+  .translate-pair{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:24px 0;background:var(--border);}
+  .tp-col{padding:20px 24px;}
+  .tp-col.jargon{background:#0f0505;}
+  .tp-col.plain{background:#050f00;}
+  .tp-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+  .tp-col.jargon .tp-label{color:#ff5555;}
+  .tp-col.plain .tp-label{color:var(--neon);}
+  .tp-text{font-size:14px;line-height:1.6;}
+  .tp-col.jargon .tp-text{color:#aa6666;}
+  .tp-col.plain .tp-text{color:var(--text);}
+  .audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:40px 0;background:var(--border);}
+  .audience-card{background:var(--bg2);padding:28px 24px;}
+  .aud-label{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--neon);text-transform:uppercase;margin-bottom:8px;}
+  .aud-name{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--white);letter-spacing:1px;margin-bottom:12px;}
+  .aud-desc{font-size:13px;color:var(--text-muted);line-height:1.5;margin-bottom:14px;}
+  .aud-message{font-size:13px;color:var(--text);font-style:italic;padding:10px 14px;background:var(--bg3);border-left:2px solid var(--neon);}
+  .channel-list{list-style:none;margin:24px 0;}
+  .channel-list li{display:flex;justify-content:space-between;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--border);font-size:15px;}
+  .channel-list li:last-child{border-bottom:none;}
+  .channel-list .ch-name{color:var(--white);font-weight:600;min-width:160px;}
+  .channel-list .ch-desc{color:var(--text-muted);font-size:14px;line-height:1.5;}
+  .channel-list .ch-tag{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--neon);text-transform:uppercase;min-width:80px;text-align:right;}
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:48px 0;background:var(--border);}
+  .stat-box{background:var(--bg2);padding:32px 24px;text-align:center;}
+  .stat-num{font-family:'Bebas Neue',sans-serif;font-size:50px;color:var(--neon);line-height:1;}
+  .stat-label{font-size:13px;color:var(--text-muted);margin-top:8px;line-height:1.4;}
+  .cta-block{background:var(--bg3);border:1px solid var(--border);padding:64px 48px;margin:80px 0;text-align:center;position:relative;overflow:hidden;}
+  .cta-block::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(200,255,0,0.05) 0%,transparent 70%);}
+  .cta-block h2{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--white);letter-spacing:2px;margin-bottom:16px;position:relative;}
+  .cta-block p{font-size:18px;color:var(--text-muted);margin-bottom:40px;position:relative;}
+  .cta-btn{display:inline-block;background:var(--neon);color:#000;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;padding:18px 48px;text-decoration:none;position:relative;}
+  .cta-btn:hover{background:#fff;}
+  .cta-secondary{display:inline-block;color:var(--text-muted);font-size:13px;letter-spacing:1px;text-decoration:none;margin-left:32px;position:relative;}
+  .related-section{border-top:1px solid var(--border);padding:80px 0;}
+  .section-label{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:3px;color:var(--neon);margin-bottom:40px;}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);}
+  .related-card{background:var(--bg2);padding:32px;text-decoration:none;display:block;transition:background .2s;}
+  .related-card:hover{background:var(--bg3);}
+  .related-card .r-tag{font-size:10px;font-weight:700;letter-spacing:2px;color:var(--neon);text-transform:uppercase;margin-bottom:12px;}
+  .related-card h4{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--white);line-height:1.1;margin-bottom:12px;}
+  .related-card p{font-size:13px;color:var(--text-muted);line-height:1.5;}
+  footer{background:var(--bg2);border-top:1px solid var(--border);padding:64px 0 32px;}
+  .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+  .footer-brand .logo{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--neon);letter-spacing:2px;margin-bottom:16px;}
+  .footer-brand p{font-size:14px;color:var(--text-muted);line-height:1.7;}
+  .footer-col h5{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2px;color:var(--white);margin-bottom:20px;}
+  .footer-col ul{list-style:none;}
+  .footer-col ul li{margin-bottom:10px;}
+  .footer-col ul li a{color:var(--text-muted);text-decoration:none;font-size:14px;}
+  .footer-col ul li a:hover{color:var(--neon);}
+  .footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;}
+  .footer-bottom p{font-size:12px;color:var(--text-muted);}
+  .reading-progress{position:fixed;top:64px;left:0;right:0;height:2px;background:var(--bg3);z-index:99;}
+  .reading-progress-bar{height:100%;background:var(--neon);width:0%;}
+  @media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none;}.container,.container-wide{padding:0 20px;}.article-title{font-size:34px;}.stat-grid,.audience-grid{grid-template-columns:1fr;}.translate-pair{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}.footer-inner{grid-template-columns:1fr;}.channel-list li{flex-direction:column;gap:6px;}.channel-list .ch-tag{text-align:left;}}
+</style>
+</head>
+<body>
+<div class="reading-progress"><div class="reading-progress-bar" id="progressBar"></div></div>
+<nav>
+  <a href="https://www.funa.digital/" class="nav-logo"><img src="https://www.funa.digital/funalogo.png" alt="FUNA Digital Marketing" style="height:32px;width:auto;"></a>
+  <ul class="nav-links">
+    <li><a href="https://www.funa.digital/">Home</a></li>
+    <li><a href="https://www.funa.digital/about.html">About Us</a></li>
+    <li><a href="https://www.funa.digital/case-studies.html">Results</a></li>
+    <li><a href="https://www.funa.digital/blog.html">Blog</a></li>
+    <li><a href="https://www.funa.digital/creators.html">Creators</a></li>
+    <li><a href="https://www.funa.digital/dubai-marketing-pulse.html">Pulse</a></li>
+    <li><a href="https://www.funa.digital/#cta">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/971502534188?text=Hi%20Funa%20Digital!%20I%27d%20like%20to%20learn%20more%20about%20your%20services." class="nav-cta">GET STARTED</a>
+</nav>
+
+<section class="article-hero">
+  <div class="container">
+    <div><span class="tag">DeFi</span><span class="tag">Web3</span><span class="tag">Mass Adoption Marketing</span></div>
+    <h1 class="article-title">How to Market a <span>DeFi Protocol</span> to Non-Technical Users</h1>
+    <p class="article-subtitle">The translation playbook — turning impenetrable blockchain jargon into messages that resonate with mainstream users, grow TVL beyond the crypto-native crowd, and build lasting adoption.</p>
+    <div class="article-meta">
+      <div class="meta-author">
+        <div class="author-avatar">F</div>
+        <div class="author-info">
+          <div class="author-name">Funa Marketing Team</div>
+          <div class="author-role">Web3 Marketing Specialists · Dubai</div>
+        </div>
+      </div>
+      <div class="meta-details">
+        <div class="meta-item"><strong>May 2026</strong></div>
+        <div class="meta-item"><strong>12 min</strong> read</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<article class="article-body">
+<div class="container">
+
+<p>DeFi has a marketing problem that no amount of TVL or protocol innovation can solve on its own: the people who build DeFi protocols speak a different language than the people who need to use them. Liquidity pools, impermanent loss, yield farming, slippage tolerance — these terms are fluent vocabulary for a developer who spent three years in Web3. They are complete gibberish to the 2 billion people globally who could genuinely benefit from decentralized financial services.</p>
+
+<p>The DeFi protocols that achieve mainstream adoption — that break out of the crypto-native bubble — are the ones that invest in translation as a core marketing discipline. Not just in making their UI simpler, but in making their communication human. This is the playbook.</p>
+
+<div class="stat-grid">
+  <div class="stat-box">
+    <div class="stat-num">94%</div>
+    <div class="stat-label">of global adults who have heard of DeFi have not used a DeFi protocol — the adoption gap</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-num">#1</div>
+    <div class="stat-label">barrier to DeFi adoption cited by non-users: "I don't understand how it works or if it's safe"</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-num">3×</div>
+    <div class="stat-label">higher conversion rate for DeFi protocols that lead with outcomes over technical features</div>
+  </div>
+</div>
+
+<div class="callout">
+  <p>The best DeFi marketing reframe: <strong>stop marketing the protocol, start marketing the outcome.</strong> Nobody wants "a decentralized AMM with concentrated liquidity positions." They want "higher returns on savings with no bank involvement." Same product. Entirely different audience reach.</p>
+</div>
+
+<h2>THE JARGON TRANSLATION GUIDE</h2>
+
+<p>Before any campaign, any landing page, any content piece — every piece of DeFi communication must pass through a translation filter. Here are the most common jargon offenders and their plain-language replacements:</p>
+
+<div class="translate-pair">
+  <div class="tp-col jargon"><div class="tp-label">❌ Jargon Version</div><div class="tp-text">"Provide liquidity to our AMM pools and earn trading fees plus token rewards with no counterparty risk."</div></div>
+  <div class="tp-col plain"><div class="tp-label">✓ Plain Language</div><div class="tp-text">"Deposit your crypto and earn income from every trade that happens on our platform — automatically, with no middleman."</div></div>
+</div>
+<div class="translate-pair">
+  <div class="tp-col jargon"><div class="tp-label">❌ Jargon Version</div><div class="tp-text">"Overcollateralized lending protocol with real-time liquidation mechanisms and governance-controlled risk parameters."</div></div>
+  <div class="tp-col plain"><div class="tp-label">✓ Plain Language</div><div class="tp-text">"Borrow against your crypto without selling it — keep your upside while accessing cash today."</div></div>
+</div>
+<div class="translate-pair">
+  <div class="tp-col jargon"><div class="tp-label">❌ Jargon Version</div><div class="tp-text">"Non-custodial yield aggregator with auto-compounding strategies across multiple DeFi protocols."</div></div>
+  <div class="tp-col plain"><div class="tp-label">✓ Plain Language</div><div class="tp-text">"Your crypto earns the best available return automatically — no bank, no manager, no fees beyond what you can see."</div></div>
+</div>
+<div class="translate-pair">
+  <div class="tp-col jargon"><div class="tp-label">❌ Jargon Version</div><div class="tp-text">"Impermanent loss risk when providing concentrated liquidity outside current price range."</div></div>
+  <div class="tp-col plain"><div class="tp-label">✓ Plain Language</div><div class="tp-text">"There's a risk your deposit could be worth less if prices move significantly — here's exactly how it works and when it matters."</div></div>
+</div>
+
+<h2>THE THREE NON-TECHNICAL AUDIENCE SEGMENTS</h2>
+
+<div class="audience-grid">
+  <div class="audience-card">
+    <div class="aud-label">Segment A</div>
+    <div class="aud-name">THE YIELD SEEKER</div>
+    <div class="aud-desc">Already holds crypto on a CEX. Getting 0–2% APY on stablecoins. Aware that "DeFi yields are higher" but intimidated by the complexity. High conversion potential — one clear explanation away from using your protocol.</div>
+    <div class="aud-message">"Your USDT sitting on Binance earns 1.2%. Ours earns 8.4%. Same asset. Here's how to move it in 4 minutes."</div>
+  </div>
+  <div class="audience-card">
+    <div class="aud-label">Segment B</div>
+    <div class="aud-name">THE UNBANKED SAVER</div>
+    <div class="aud-desc">Has limited or no access to traditional savings accounts with meaningful returns. Increasingly has a smartphone and knows about crypto. DeFi's value proposition — earn on savings with no bank required — is genuinely transformative for this segment.</div>
+    <div class="aud-message">"Earn on your savings without a bank account. All you need is a phone and a crypto wallet. We'll show you how."</div>
+  </div>
+  <div class="audience-card">
+    <div class="aud-label">Segment C</div>
+    <div class="aud-name">THE CURIOUS INVESTOR</div>
+    <div class="aud-desc">Invests in stocks, ETFs, maybe some crypto. Has heard of DeFi. Skeptical but curious. Evaluating whether the risk-return profile makes sense. Needs clear risk disclosure alongside clear opportunity framing — and responds well to analogies from traditional finance.</div>
+    <div class="aud-message">"Think of it like a money market fund — but run by code, not a fund manager. Here's the exact comparison."</div>
+  </div>
+</div>
+
+<h2>THE CONTENT CHANNELS THAT REACH NON-TECHNICAL USERS</h2>
+
+<ul class="channel-list">
+  <li>
+    <span class="ch-name">YouTube Explainers</span>
+    <span class="ch-desc">"How to earn 8% on USDT with no bank" — practical, outcome-first titles. Step-by-step walkthroughs with real wallet interactions. Non-technical creators explaining to non-technical audiences outperform crypto-native creators 3× for this segment.</span>
+    <span class="ch-tag">PRIMARY</span>
+  </li>
+  <li>
+    <span class="ch-name">Twitter/X Threads</span>
+    <span class="ch-desc">Analogy-led threads: "DeFi lending explained using a pawn shop analogy — thread." The thread format lets you build complexity gradually. Non-technical readers follow if the first tweet is accessible — then each subsequent tweet adds one layer.</span>
+    <span class="ch-tag">HIGH</span>
+  </li>
+  <li>
+    <span class="ch-name">Landing Page Education</span>
+    <span class="ch-desc">Your protocol landing page must explain what you do in one sentence a non-technical reader understands. Then one paragraph. Then a "how it works" section with a 3-step visual. Most DeFi landing pages fail this test completely — they assume knowledge the mainstream user does not have.</span>
+    <span class="ch-tag">CRITICAL</span>
+  </li>
+  <li>
+    <span class="ch-name">TikTok — Educational Format</span>
+    <span class="ch-desc">"I put $1,000 into a DeFi protocol 30 days ago — here's what happened" — outcome-first, personal, real numbers. No jargon. Extremely high reach for this format when it reaches the right FYP audience.</span>
+    <span class="ch-tag">GROWING</span>
+  </li>
+  <li>
+    <span class="ch-name">Telegram Onboarding Bot</span>
+    <span class="ch-desc">A conversational bot that walks new users through their first deposit step-by-step. Removes the intimidation of "figuring it out alone." The biggest drop-off point for non-technical DeFi users is between intent and first transaction — a guided bot bridges this gap.</span>
+    <span class="ch-tag">HIGH ROI</span>
+  </li>
+</ul>
+
+<h2>THE RISK COMMUNICATION PRINCIPLE — NEVER HIDE IT</h2>
+
+<p>The temptation in DeFi marketing is to lead with the yield and minimize the risk. This is both ethically wrong and strategically counterproductive. Non-technical users who encounter unexpected losses — impermanent loss, smart contract exploits, protocol shutdowns — immediately become the loudest negative voices in every community they inhabit.</p>
+
+<p><strong>The approach that builds durable trust:</strong> explain risks in plain language before the user deposits. "Here are the three ways you could lose money using this protocol, and here is what we have done to minimize each one." This radical risk transparency, counterintuitively, increases conversion from non-technical users — because it signals that the protocol has nothing to hide.</p>
+
+<p>Non-technical users are not unsophisticated — they are unfamiliar with jargon. They understand risk perfectly well when it is explained clearly. They distrust protocols that obscure it. Be the protocol that explains everything, and you become the default choice for mainstream adoption.</p>
+
+</div>
+</article>
+
+<div class="container">
+  <div class="cta-block">
+    <h2>MAKE YOUR DEFI PROTOCOL ACCESSIBLE TO EVERYONE</h2>
+    <p>We translate complex DeFi products into marketing that mainstream users understand, trust, and act on — content strategy, landing pages, community, and paid acquisition.</p>
+    <a href="https://wa.me/971502534188?text=Hi%20Funa%20Digital!%20I%27d%20like%20to%20learn%20more%20about%20your%20services." class="cta-btn">BUILD MY DEFI STRATEGY →</a>
+    <a href="https://www.funa.digital/blog.html" class="cta-secondary">Read more articles</a>
+  </div>
+</div>
+
+<div class="container-wide">
+  <div class="related-section">
+    <div class="section-label">RELATED ARTICLES — WEB3 / DEFI</div>
+    <div class="related-grid">
+      <a href="/blog/token-launch-marketing-playbook.html" class="related-card">
+        <div class="r-tag">Web3 · Token Launch</div>
+        <h4>Token Launch Marketing Playbook</h4>
+        <p>From pre-launch community building to TGE day — the complete sequence.</p>
+      </a>
+      <a href="/blog/web3-content-strategy-pre-launch.html" class="related-card">
+        <div class="r-tag">Web3 · Content</div>
+        <h4>The Web3 Content Strategy That Builds Trust Before Launch</h4>
+        <p>How to build an audience and credibility before your product is live.</p>
+      </a>
+      <a href="/blog/crypto-brand-trust-2026.html" class="related-card">
+        <div class="r-tag">Crypto · Trust · Branding</div>
+        <h4>How to Build a Crypto Brand That Earns Trust in 2026</h4>
+        <p>Trust-building applies equally to DeFi protocols and centralised exchanges.</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container-wide">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="https://www.funa.digital/funalogo.png" alt="FUNA Digital Marketing" style="height:36px;width:auto;margin-bottom:16px;display:block;"><p>Performance marketing for crypto, prop trading, and financial brands in Dubai and the GCC.</p></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="#">Paid Media</a></li><li><a href="#">SEO & Content</a></li><li><a href="#">Community</a></li><li><a href="#">Branding</a></li></ul></div>
+      <div class="footer-col"><h5>Industries</h5><ul><li><a href="#">Prop Trading</a></li><li><a href="#">Crypto</a></li><li><a href="#">DeFi / Web3</a></li><li><a href="#">Real Estate</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="https://www.funa.digital/blog.html">Blog</a></li><li><a href="#">About</a></li><li><a href="#">Results</a></li><li><a href="#">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Funa Digital. Dubai, UAE.</p><p>Marketing for financial brands · Not financial advice</p></div>
+  </div>
+</footer>
+<script>window.addEventListener('scroll',()=>{const d=document.documentElement;document.getElementById('progressBar').style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%';});</script>
+</body>
+</html>
