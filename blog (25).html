@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Funa Digital Marketing Dubai | Growth Marketing Insights UAE</title>
+<meta name="description" content="Marketing insights, growth strategies and digital marketing tips for UAE businesses. Learn how to grow your brand in Dubai with Funa Digital Marketing.">
+<meta name="keywords" content="digital marketing blog dubai, marketing tips UAE, growth marketing dubai, social media marketing UAE">
+<link rel="canonical" href="https://www.funa.digital/blog.html">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Blog — Funa Digital Marketing Dubai">
+<meta property="og:url" content="https://www.funa.digital/blog.html">
+<meta property="og:image" content="https://www.funa.digital/og-image.jpg">
+<meta property="og:type" content="website">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9L3SWKHYS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z9L3SWKHYS');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- Meta Pixel -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','959101420056879');fbq('track','PageView');</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{--neon:#C8FF00;--black:#080808;--dark:#111;--card:#161616;--white:#fff;--gray:#888;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 48px;background:#000;border-bottom:1px solid rgba(200,255,0,0.08);}
+nav ul{display:flex;gap:32px;list-style:none;}
+nav ul a{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color 0.2s;}
+nav ul a:hover,nav ul a.active{color:var(--neon);}
+.nav-cta{background:var(--neon);color:#000;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;padding:10px 24px;text-decoration:none;}
+
+/* COMPACT HERO — title left, stats right */
+.blog-hero{padding:96px 64px 0;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end;border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:32px;}
+.hero-left{}
+.section-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--neon);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.section-tag::before{content:'';display:block;width:20px;height:2px;background:var(--neon);}
+.blog-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,7vw,90px);line-height:0.9;}
+.blog-hero h1 span{color:var(--neon);}
+.hero-sub{font-size:14px;color:var(--gray);font-weight:300;max-width:480px;line-height:1.6;margin-top:12px;}
+.hero-right{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:rgba(255,255,255,0.04);min-width:340px;}
+.stat-box{background:var(--black);padding:20px 24px;}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--neon);line-height:1;}
+.stat-label{font-size:11px;color:var(--gray);margin-top:2px;font-weight:300;}
+
+/* STICKY CONTROL BAR — search + sort + filters all together */
+.control-bar{position:sticky;top:80px;z-index:90;background:var(--black);border-bottom:1px solid rgba(255,255,255,0.07);}
+
+/* Search + Sort row */
+.search-sort-row{display:flex;align-items:center;gap:0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.search-wrap{flex:1;display:flex;align-items:center;gap:10px;padding:0 24px;border-right:1px solid rgba(255,255,255,0.05);}
+.search-wrap svg{opacity:0.35;flex-shrink:0;}
+#search-input{flex:1;background:transparent;border:none;outline:none;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:0.06em;padding:14px 0;caret-color:var(--neon);}
+#search-input::placeholder{color:rgba(255,255,255,0.25);}
+#search-clear{background:none;border:none;color:rgba(255,255,255,0.3);cursor:pointer;font-size:20px;line-height:1;padding:0;display:none;}
+.sort-wrap{display:flex;align-items:center;gap:0;flex-shrink:0;}
+.sort-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);padding:0 16px;white-space:nowrap;}
+.sort-btn{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:14px 16px;border:none;border-left:1px solid rgba(255,255,255,0.05);background:transparent;color:var(--gray);cursor:pointer;white-space:nowrap;transition:all 0.2s;display:flex;align-items:center;gap:5px;}
+.sort-btn:hover{color:var(--white);}
+.sort-btn.active{color:var(--neon);background:rgba(200,255,0,0.04);}
+.sort-btn .sort-arrow{font-size:10px;opacity:0.6;}
+
+/* Filter rows */
+.filter-rows{padding:10px 24px;}
+.filter-row{display:flex;align-items:center;gap:6px;padding:4px 0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+.filter-row::-webkit-scrollbar{display:none;}
+.filter-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);white-space:nowrap;margin-right:4px;flex-shrink:0;min-width:64px;}
+.filter-btn{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:5px 10px;border:1px solid rgba(255,255,255,0.08);background:transparent;color:var(--gray);cursor:pointer;white-space:nowrap;transition:all 0.2s;display:inline-flex;align-items:center;gap:4px;flex-shrink:0;}
+.filter-btn:hover{border-color:rgba(200,255,0,0.4);color:var(--neon);}
+.filter-btn.active{background:var(--neon);color:#000;border-color:var(--neon);}
+.filter-count{font-size:8px;background:rgba(255,255,255,0.12);color:inherit;padding:1px 4px;border-radius:6px;font-weight:800;min-width:14px;text-align:center;}
+.filter-btn.active .filter-count{background:rgba(0,0,0,0.2);}
+
+/* RESULTS BAR */
+.results-bar{padding:12px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.04);}
+.results-info{font-family:'Barlow Condensed',sans-serif;font-size:11px;color:var(--gray);letter-spacing:0.12em;text-transform:uppercase;}
+.results-info span{color:var(--neon);font-size:13px;}
+
+/* 4-COLUMN GRID */
+.blog-container{padding:2px 0 100px;}
+.blog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
+
+/* CARDS */
+.blog-card{background:var(--card);border:1px solid rgba(255,255,255,0.03);overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform 0.25s,border-color 0.25s;}
+.blog-card:hover{transform:translateY(-3px);border-color:rgba(200,255,0,0.12);}
+.blog-card.hidden{display:none;}
+.card-thumb{height:180px;position:relative;overflow:hidden;background:var(--dark);}
+.card-thumb img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.7);transition:transform 0.5s,filter 0.3s;}
+.blog-card:hover .card-thumb img{transform:scale(1.06);filter:brightness(0.85);}
+.card-topic-badge{position:absolute;top:10px;left:10px;background:var(--neon);color:#000;font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;padding:3px 8px;}
+.card-industry-badge{position:absolute;bottom:10px;left:10px;background:rgba(0,0,0,0.75);color:rgba(255,255,255,0.65);font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:2px 7px;border:1px solid rgba(255,255,255,0.1);}
+.card-read-time{position:absolute;top:10px;right:10px;background:rgba(0,0,0,0.7);color:rgba(255,255,255,0.55);font-family:'Barlow Condensed',sans-serif;font-size:8px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:2px 7px;}
+.card-body{padding:16px;flex:1;display:flex;flex-direction:column;}
+.card-date{font-size:9px;color:var(--gray);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;}
+.card-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;color:#fff;line-height:1.2;margin-bottom:8px;flex:1;}
+.card-excerpt{font-size:11px;color:rgba(255,255,255,0.45);line-height:1.5;font-weight:300;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.card-read{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--neon);display:flex;align-items:center;gap:4px;}
+.card-read::after{content:'→';transition:transform 0.2s;}
+.blog-card:hover .card-read::after{transform:translateX(3px);}
+
+/* NO RESULTS */
+.no-results{display:none;grid-column:span 4;text-align:center;padding:80px 0;}
+.no-results.visible{display:block;}
+.no-results h3{font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(255,255,255,0.1);margin-bottom:10px;}
+.no-results p{color:var(--gray);font-size:14px;}
+
+/* FOOTER */
+footer{background:#000;border-top:1px solid rgba(200,255,0,0.1);padding:40px 64px;display:flex;justify-content:space-between;align-items:center;}
+.footer-copy{font-size:12px;color:var(--gray);}
+.footer-copy span{color:var(--neon);}
+.back-home{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--neon);text-decoration:none;border-bottom:1px solid var(--neon);padding-bottom:2px;}
+
+/* RESPONSIVE */
+@media(max-width:1200px){.blog-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:1024px){.blog-grid{grid-template-columns:repeat(2,1fr);}.hero-right{min-width:280px;}}
+@media(max-width:768px){
+  nav{padding:16px 24px;}nav ul{display:none;}.nav-cta{display:none;}
+  .blog-hero{grid-template-columns:1fr;padding:96px 20px 24px;gap:24px;}
+  .hero-right{grid-template-columns:repeat(4,1fr);min-width:auto;}
+  .stat-box{padding:14px 12px;}.stat-num{font-size:28px;}
+  .control-bar{top:64px;}
+  .search-sort-row{flex-wrap:wrap;}
+  .sort-wrap{width:100%;border-top:1px solid rgba(255,255,255,0.05);overflow-x:auto;}
+  .sort-btn{padding:10px 12px;font-size:10px;}
+  .filter-rows{padding:8px 16px;}
+  .blog-container{padding:2px 0 60px;}
+  .blog-grid{grid-template-columns:repeat(2,1fr);}
+  .no-results{grid-column:span 2;}
+  .results-bar{padding:10px 16px;}
+  footer{flex-direction:column;gap:12px;padding:32px 20px;text-align:center;}
+}
+@media(max-width:480px){.blog-grid{grid-template-columns:1fr;}.no-results{grid-column:span 1;}.hero-right{grid-template-columns:repeat(2,1fr);}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" style="text-decoration:none;display:flex;align-items:center;">
+    <img src="/funalogo.png" alt="FUNA Digital Marketing" style="height:44px;width:auto;display:block;">
+  </a>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about.html">About Us</a></li>
+    <li><a href="/case-studies.html">Results</a></li>
+    <li><a href="/blog.html" class="active">Blog</a></li>
+    <li><a href="/creators.html">Creators</a></li>
+    <li><a href="/dubai-marketing-pulse.html">Pulse</a></li>
+    <li><a href="/#cta">Contact</a></li>
+  </ul>
+  <a href="/#cta" class="nav-cta">Get Started</a>
+</nav>
+
+<!-- COMPACT HERO -->
+<div class="blog-hero">
+  <div class="hero-left">
+    <div class="section-tag">Insights & Strategy</div>
+    <h1>MARKETING<br><span>INSIGHTS</span></h1>
+    <p class="hero-sub">Growth strategies, digital marketing tips and industry news for UAE businesses looking to scale fast in Dubai and the GCC.</p>
+  </div>
+  <div class="hero-right">
+    <div class="stat-box">
+      <div class="stat-num" id="total-count">0</div>
+      <div class="stat-label">Articles Published</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">14</div>
+      <div class="stat-label">Topics Covered</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">11</div>
+      <div class="stat-label">Industries</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">🌍</div>
+      <div class="stat-label">Global Clients</div>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY CONTROL BAR -->
+<div class="control-bar">
+
+  <!-- Row 1: Search + Sort -->
+  <div class="search-sort-row">
+    <div class="search-wrap">
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="search-input" placeholder="Search articles — e.g. 'TikTok', 'WhatsApp', 'SEO', 'Ramadan'..." oninput="handleSearch(this.value)">
+      <button id="search-clear" onclick="clearSearch()">×</button>
+    </div>
+    <div class="sort-wrap">
+      <span class="sort-label">Sort:</span>
+      <button class="sort-btn active" data-sort="newest" onclick="setSort('newest')">
+        <span>Newest</span><span class="sort-arrow">↓</span>
+      </button>
+      <button class="sort-btn" data-sort="oldest" onclick="setSort('oldest')">
+        <span>Oldest</span><span class="sort-arrow">↑</span>
+      </button>
+      <button class="sort-btn" data-sort="az" onclick="setSort('az')">
+        <span>A → Z</span>
+      </button>
+      <button class="sort-btn" data-sort="za" onclick="setSort('za')">
+        <span>Z → A</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Row 2 & 3: Filters -->
+  <div class="filter-rows">
+    <div class="filter-row" id="topic-filters">
+      <span class="filter-label">Topic:</span>
+    </div>
+    <div class="filter-row" id="industry-filters">
+      <span class="filter-label">Industry:</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- RESULTS INFO -->
+<div class="results-bar">
+  <div class="results-info">Showing <span id="showing-count">0</span> articles</div>
+</div>
+
+<!-- GRID -->
+<div class="blog-container">
+  <div class="blog-grid" id="blog-grid">
+    <div class="no-results" id="no-results">
+      <h3>No Articles Found</h3>
+      <p>Try a different topic, industry, or search term.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 <span>Funa Digital Marketing</span>. All rights reserved. Dubai, UAE.</div>
+  <a href="/" class="back-home">← Back to funa.digital</a>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/971502534188?text=Hi%20Funa%20Digital!%20I%27d%20like%20to%20learn%20more%20about%20your%20services."
+   target="_blank" rel="noopener"
+   style="position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s;"
+   onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"
+   aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// ── ARTICLES DATABASE ──
+const articles = [
+
+  { file:"whatsapp-marketing-uae.html", title:"WhatsApp Marketing UAE: The Secret Weapon of Dubai's Best Brands", excerpt:"How Dubai's top brands use WhatsApp to convert leads 40% faster than any other channel.", topic:"Social Media", industry:"All", img:"https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80", date:"May 2026", read:"9 min" },
+  { file:"meta-ads-dubai.html", title:"Meta Ads Dubai: How to Run Facebook & Instagram Ads That Convert", excerpt:"The complete guide to running high-converting Meta Ads campaigns for Dubai businesses.", topic:"Paid Media", industry:"All", img:"https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"get-clients-dubai.html", title:"How to Get Clients in Dubai: The Complete 2026 Guide", excerpt:"The exact system to consistently generate new business in the UAE market.", topic:"Growth Strategy", industry:"All", img:"https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80", date:"May 2026", read:"9 min" },
+  { file:"lead-generation-dubai.html", title:"Lead Generation Dubai: 7 Strategies That Actually Work in 2026", excerpt:"The 7 lead generation strategies generating the best ROI for Dubai businesses.", topic:"Lead Generation", industry:"All", img:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"tiktok-marketing-uae.html", title:"TikTok Marketing UAE: How Dubai Brands Are Going Viral in 2026", excerpt:"How Dubai businesses are turning TikTok views into real revenue.", topic:"Social Media", industry:"All", img:"https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80", date:"May 2026", read:"8 min" },
+  { file:"google-ads-vs-meta-ads-dubai.html", title:"Google Ads vs Meta Ads in Dubai: Which One is Better?", excerpt:"A data-driven comparison to help UAE companies choose the right paid advertising channel.", topic:"Paid Media", industry:"All", img:"https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80", date:"May 2026", read:"9 min" },
+  { file:"social-media-dubai-business.html", title:"Best Social Media Platforms for Dubai Businesses in 2026", excerpt:"Instagram, LinkedIn, TikTok, or Facebook? A data-driven guide for UAE brands.", topic:"Social Media", industry:"All", img:"https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=600&q=80", date:"May 2026", read:"8 min" },
+  { file:"content-creation-dubai-instagram.html", title:"Content Creation Dubai: What Works on Instagram in 2026", excerpt:"The content formats and posting strategies that generate real business results.", topic:"Content Marketing", industry:"All", img:"https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80", date:"May 2026", read:"8 min" },
+  { file:"ai-marketing-uae.html", title:"AI Marketing UAE: How Dubai Businesses Use AI to Grow in 2026", excerpt:"How the UAE's fastest-growing brands are using AI in their marketing stack.", topic:"AI Marketing", industry:"All", img:"https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80", date:"May 2026", read:"9 min" },
+  { file:"branding-dubai.html", title:"Branding in Dubai: How to Stand Out in the GCC's Most Competitive Market", excerpt:"In Dubai's ultra-competitive market, branding is the difference between winning and disappearing.", topic:"Branding", industry:"All", img:"https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80", date:"May 2026", read:"9 min" },
+  { file:"real-estate-marketing-dubai.html", title:"Digital Marketing for Real Estate in Dubai: The Complete 2026 Guide", excerpt:"How developers, agents, and brokers are using digital marketing to capture Dubai's record property market.", topic:"Lead Generation", industry:"Real Estate", img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"digital-marketing-cost-dubai.html", title:"How Much Does Digital Marketing Cost in Dubai? (2026 Pricing Guide)", excerpt:"Agency fees, ad budgets, and ROI benchmarks — an honest pricing breakdown for UAE businesses.", topic:"Growth Strategy", industry:"All", img:"https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=600&q=80", date:"May 2026", read:"7 min" },
+  { file:"email-marketing-uae.html", title:"Email Marketing UAE: How to Build a List That Actually Converts", excerpt:"While everyone chases social followers, smart Dubai businesses build email lists that generate revenue on demand.", topic:"Email Marketing", industry:"All", img:"https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=600&q=80", date:"May 2026", read:"9 min" },
+  { file:"influencer-marketing-dubai.html", title:"Influencer Marketing Dubai: The Complete 2026 Guide", excerpt:"How to find, vet, and work with Instagram influencers in Dubai. Structure deals and measure real ROI.", topic:"Influencer Marketing", industry:"All", img:"https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"seo-dubai.html", title:"SEO Dubai: How to Rank #1 on Google UAE in 2026", excerpt:"Dubai's Google landscape is competitive but winnable. Most businesses leave enormous SEO opportunities untapped.", topic:"SEO & Search", industry:"All", img:"https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"google-business-profile-dubai.html", title:"Google Business Profile Dubai: Get More Local Clients in 2026", excerpt:"When someone searches for your type of business, Google Maps results appear first. Here's how to dominate them.", topic:"SEO & Search", industry:"All", img:"https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80", date:"May 2026", read:"8 min" },
+  { file:"ecommerce-marketing-uae.html", title:"Ecommerce Marketing UAE: How to Scale Your Online Store in Dubai", excerpt:"The UAE ecommerce market hits AED 27 billion in 2026. Here's how to capture your share.", topic:"Ecommerce", industry:"E-commerce", img:"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"dubai-crypto-capital-2026.html", title:"Dubai 2026: The World's Crypto Capital & How to Grow Your Business Here", excerpt:"0% capital gains tax, VARA regulation and $30B in investments. How Dubai became the world's crypto hub and what it means for your business.", topic:"Negocios", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&q=80", date:"May 2026", read:"8 min" },
+
+  { file:"vara-20-crypto-marketing-rules-dubai.html", title:"VARA 2.0: The New Rules of Crypto in Dubai and What It Means for Your Marketing", excerpt:"Todo sobre VARA 2.0 y cómo hacer marketing legal de criptomonedas en UAE sin violar las normas.", topic:"Negocios", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1642543492481-44e81e3914a7?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"best-crypto-platforms-dubai-2026.html", title:"The 8 Best Crypto Trading Platforms in UAE for 2026", excerpt:"Binance, OKX, Bybit, Rain — comparativa completa con fees, features y regulación VARA.", topic:"Negocios", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"zero-taxes-crypto-dubai.html", title:"Zero Taxes en Crypto: Why Dubai is the Paradise del Trader Digital", excerpt:"0% de impuesto a las ganancias de capital. Sin income tax. Dubai es el destino fiscal más favorable para traders crypto.", topic:"Negocios", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=600&q=80", date:"May 2026", read:"9 min" },
+  { file:"crypto-marketing-dubai-vara-compliant.html", title:"How to Do Marketing Digital para un Proyecto Crypto en Dubai sin Violar VARA", excerpt:"Guía práctica de crypto marketing legal: contenido, influencers, ads y estrategias que funcionan en UAE.", topic:"Negocios", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1642543492481-44e81e3914a7?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"bitcoin-ethereum-uae-market-2026.html", title:"Bitcoin, Ethereum y el Mercado UAE en 2026: Análisis y Estrategia para Traders", excerpt:"Análisis del mercado crypto en UAE, perfil del trader local y cómo construir comunidad de trading en Dubai.", topic:"Negocios", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&q=80", date:"May 2026", read:"9 min" },
+  { file:"mgx-binance-gulf-investment-2026.html", title:"La Inversión de $2 Billones de MGX en Binance: Lo que Todo Marketer del Golfo Debe Saber", excerpt:"El deal Abu Dhabi-Binance y su impacto en negocios y marketing de la región del Golfo.", topic:"Negocios", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80", date:"May 2026", read:"8 min" },
+  { file:"copy-trading-dubai-2026.html", title:"Copy Trading en Dubai 2026: How Funciona y How Promocionar tu Estrategia", excerpt:"Bybit, Bitget — cómo funciona el copy trading en UAE y cómo los traders construyen su marca personal.", topic:"Negocios", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80", date:"May 2026", read:"9 min" },
+  { file:"web3-defi-nfts-uae-2026.html", title:"Web3, DeFi y NFTs en los EAU: La Nueva Frontera del Marketing Digital para 2026", excerpt:"RAK DAO, DeFi protocols, NFTs como herramienta de marketing y branding en Dubai.", topic:"Negocios", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"crypto-clients-marketing-agency-dubai.html", title:"How a Agencia de Marketing Puede Conseguir Clientes del Mundo Crypto en Dubai", excerpt:"Guía para agencias: cómo entrar al mercado crypto de Dubai, qué servicios ofrecer y dónde encontrar clientes.", topic:"Negocios", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"igaming-marketing-agency-guide.html", title:"iGaming Marketing Agency: How to Choose the Right Partner for Your Online Casino", excerpt:"The wrong iGaming agency can cost you millions. Here's exactly how to evaluate, vet, and choose the right partner for your operation.", topic:"Lead Generation", industry:"iGaming", img:"https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"seo-igaming-online-casino.html", title:"SEO for iGaming: How to Rank Your Online Casino in Competitive Markets in 2026", excerpt:"iGaming SEO is the most competitive vertical in digital marketing. The operators who win organic search own the most sustainable acquisition channel.", topic:"SEO & Search", industry:"iGaming", img:"https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"affiliate-marketing-igaming.html", title:"Affiliate Marketing for iGaming: Building a Network That Generates Consistent Players", excerpt:"Affiliates drive 40-60% of player acquisition for most online casinos. Here's how to build and manage a high-performing affiliate program.", topic:"Growth Strategy", industry:"iGaming", img:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"social-media-igaming-brands.html", title:"Social Media Marketing for iGaming Brands: What Works (and What Gets You Banned)", excerpt:"Every major social platform restricts gambling content. The operators who understand the rules build massive audiences while competitors get suspended.", topic:"Social Media", industry:"iGaming", img:"https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"content-marketing-online-casino.html", title:"Content Marketing for Online Casinos: How to Build Authority in Regulated Markets", excerpt:"The online casinos that dominate organic search invested in content before their competitors did. Here's the complete content strategy playbook.", topic:"Content Marketing", industry:"iGaming", img:"https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"influencer-marketing-igaming.html", title:"Influencer Marketing for iGaming: How to Find and Work with Gaming Creators in 2026", excerpt:"Casino streamers drive more first-time deposits than almost any other acquisition channel. Here's how to build partnerships that deliver players.", topic:"Influencer Marketing", industry:"iGaming", img:"https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"player-acquisition-online-casino.html", title:"Player Acquisition for Online Casinos: The Complete 2026 Strategy", excerpt:"The casinos that win aren't the ones with the biggest bonuses — they're the ones with the most efficient player acquisition systems.", topic:"Lead Generation", industry:"iGaming", img:"https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"igaming-latam-2026.html", title:"iGaming in Latam 2026: The Fastest Growing Market and How to Win It", excerpt:"Brazil's regulated market, Colombia's maturity, and Mexico's scale create a $15B+ opportunity for operators who move fast.", topic:"Growth Strategy", industry:"iGaming", img:"https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"dubai-real-estate-2026-conflict-impact.html", title:"Dubai Real Estate 2026: How the Middle East Conflict Impacted Property Prices", excerpt:"When regional tensions escalated, analysts predicted a crash. What actually happened was far more complex — and full of opportunity.", topic:"Growth Strategy", industry:"Real Estate", img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"dubai-rental-market-2026.html", title:"Dubai Rental Market 2026: Average Prices by Area, What Changed, and What to Expect", excerpt:"Dubai rents increased 18% in 2025. But the market is more nuanced than the headline numbers suggest.", topic:"Growth Strategy", industry:"Real Estate", img:"https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"buying-property-dubai-2026.html", title:"Buying Property in Dubai 2026: Complete Price Guide by Area and Property Type", excerpt:"From AED 400K studios to AED 50M+ mansions — exactly what things cost and how the buying process works.", topic:"Growth Strategy", industry:"Real Estate", img:"https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"off-plan-properties-dubai-2026.html", title:"Off-Plan Properties in Dubai 2026: The Complete Guide for Investors", excerpt:"Off-plan represents the highest potential returns — and the highest risk. Here's how to separate winners from disasters.", topic:"Growth Strategy", industry:"Real Estate", img:"https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"build-wealth-dubai-real-estate.html", title:"How to Build Wealth Through Dubai Real Estate: A Step-by-Step Investment Strategy", excerpt:"Dubai's property market has created more millionaires per capita than almost any city. Here's the systematic approach.", topic:"Growth Strategy", industry:"Real Estate", img:"https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80", date:"May 2026", read:"13 min" },
+  { file:"invest-dubai-real-estate-limited-capital.html", title:"Investing in Dubai Real Estate with Limited Capital: Options for Every Budget in 2026", excerpt:"The biggest myth: you need millions to start. In 2026 there are credible paths to Dubai property from AED 50,000.", topic:"Growth Strategy", industry:"Real Estate", img:"https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"dubai-real-estate-roi-2026.html", title:"Dubai Real Estate ROI 2026: Which Areas and Property Types Generate the Best Returns", excerpt:"The difference between a 4% and 9% yield on the same capital is the difference between a mediocre investment and a wealth-building machine.", topic:"Growth Strategy", industry:"Real Estate", img:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"golden-visa-dubai-property-2026.html", title:"Golden Visa Through Dubai Property: The Complete 2026 Guide", excerpt:"The UAE Golden Visa is one of the most valuable residency programs in the world — and Dubai property is the most popular pathway.", topic:"Growth Strategy", industry:"Real Estate", img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"real-estate-agency-marketing-dubai-2026.html", title:"How a Real Estate Agency Can Win Marketing in Dubai's Saturated, Crisis Market", excerpt:"6,000+ agents competing for the same leads. Most are doing the same things. Here's how to do something completely different.", topic:"Lead Generation", industry:"Real Estate", img:"https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80", date:"May 2026", read:"13 min" },
+  { file:"habits-keeping-you-weak.html", title:"The Habits That Are Keeping You Weak (And How to Break Them for Good)", excerpt:"7 silent habits that keep you stuck — and a brutally honest guide on how to break them once and for all.", topic:"Negocios", industry:"All", img:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80", date:"May 2026", read:"9 min" },
+  { file:"selling-is-not-manipulation.html", title:"Selling Is Not Manipulation: 7 Keys to Mastering Authentic Sales", excerpt:"Sales is behind 99% of everything you do. Here are 7 keys to authentic, empathetic selling that actually converts.", topic:"Negocios", industry:"All", img:"https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"women-entrepreneurs-5-things.html", title:"5 Things Nobody Tells You Before Starting Your Business as a Woman Entrepreneur", excerpt:"Hard-earned lessons from women founders across Dubai, UAE and the GCC who built their brands from scratch.", topic:"Negocios", industry:"All", img:"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80", date:"May 2026", read:"9 min" },
+  { file:"shark-mindset-stop-complaining.html", title:"Shark Mindset: Stop Complaining and Start Building the Year You Want", excerpt:"Complaining attracts poverty. Gratitude attracts abundance. The mindset principles that separate winners from complainers.", topic:"Negocios", industry:"All", img:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"unbreakable-confidence.html", title:"Unbreakable Confidence: How to Build a Security Nobody Can Take From You", excerpt:"The security that depends on knowledge or money is fragile. The one that comes from knowing who you are has no ceiling.", topic:"Negocios", industry:"All", img:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"habits-keeping-you-weak-es.html", title:"The 7 Habits Keeping You Weak: Break Them Once and for All", excerpt:"The 7 silent habits that sabotage your growth without you noticing — and exactly how to break each one.", topic:"Negocios", industry:"All", img:"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80", date:"May 2026", read:"9 min" },
+,
+  // ── BLOQUE 1: PROP TRADING (12 artículos) ──
+  { file:"prop-trading-scale-beyond-affiliates.html", title:"How Prop Trading Firms Can Scale Beyond Affiliates", excerpt:"The complete guide to building owned acquisition channels — paid media, content, SEO, community — so growth doesn't depend on affiliate commissions you can't control.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80", date:"May 2026", read:"14 min" },
+  { file:"prop-firm-brand-differentiation.html", title:"Prop Firm Brand Differentiation: How to Stand Out in a Saturated Market", excerpt:"Positioning strategy for prop firms in a market where 200+ firms offer almost identical products at similar price points.", topic:"Branding", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"paid-media-prop-trading-firms.html", title:"Best Paid Media Channels for Prop Trading Firms in 2026", excerpt:"Meta, Google, TikTok, Snapchat — which channels work for prop trading ads, what the compliance rules are, and how to allocate budget.", topic:"Paid Media", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80", date:"May 2026", read:"13 min" },
+  { file:"prop-firm-trading-community.html", title:"How to Build a Trading Community That Drives Prop Firm Growth", excerpt:"Discord, Telegram, WhatsApp — the community infrastructure that turns customers into advocates and your lowest-CAC acquisition channel.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"prop-firm-content-marketing.html", title:"Content Marketing for Prop Trading Firms: The Full Strategy", excerpt:"The content types, publishing cadence, and SEO keywords that build organic acquisition for prop firms over 6–12 months.", topic:"Content Marketing", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"prop-firm-challenge-landing-page.html", title:"How to Build a Prop Firm Challenge Landing Page That Converts", excerpt:"The landing page anatomy, copy structure, trust elements, and CRO tests that take challenge page conversion from 1.5% to 5%+.", topic:"Lead Generation", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"prop-firm-email-whatsapp-sequences.html", title:"Email and WhatsApp Sequences That Convert Prop Firm Leads", excerpt:"The 5-email nurture sequence, abandoned cart flow, and WhatsApp automation that converts leads who didn't buy on first visit.", topic:"Email Marketing", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"prop-firm-influencer-marketing.html", title:"Influencer Marketing for Prop Trading Firms: What Works in 2026", excerpt:"Micro vs macro influencers, CPA-based deals, vetting for fake followers, and the brief structure that produces compliant, converting content.", topic:"Influencer Marketing", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"prop-firm-seo-keywords.html", title:"The Complete Prop Firm SEO Keyword Guide for 2026", excerpt:"300+ high-intent keywords, content clusters, and the SEO architecture that builds organic traffic for prop trading brands.", topic:"SEO & Search", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80", date:"May 2026", read:"10 min" },
+  { file:"prop-firm-marketing-budget.html", title:"Prop Firm Marketing Budget: How to Allocate for Maximum ROI", excerpt:"Channel-by-channel budget allocation at three spend levels — how to distribute marketing budget for prop firms at different growth stages.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"prop-firm-case-study-200-to-800.html", title:"Case Study: From 200 to 800 Challenges Per Month in 90 Days", excerpt:"Landing page rebuild, Meta campaign restructure, WhatsApp automation, and influencer programme that 4× a prop firm's monthly volume.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80", date:"May 2026", read:"15 min" },
+  { file:"funded-trader-funnel.html", title:"The Funded Trader Funnel: From First Click to Funded Account", excerpt:"The complete acquisition and conversion funnel for prop firms — every stage, every touchpoint, every optimisation lever mapped.", topic:"Lead Generation", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80", date:"May 2026", read:"13 min" },
+
+  // ── BLOQUE 2: CRYPTO EXCHANGES (6 artículos) ──
+  { file:"crypto-exchange-marketing-uae.html", title:"Crypto Exchange Marketing in UAE: What Gets Ads Banned and What Does Not", excerpt:"The compliance and creative guide for crypto exchange advertising in UAE — what language triggers rejection on Meta and Google, and what works.", topic:"Paid Media", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=600&q=80", date:"May 2026", read:"13 min" },
+  { file:"crypto-user-acquisition-dubai.html", title:"How to Acquire Crypto Users in Dubai: The Full Channel Playbook", excerpt:"Channel-by-channel user acquisition for crypto exchanges in Dubai — paid media, referral, community, influencer, and organic combined.", topic:"Lead Generation", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"arabic-english-crypto-marketing-uae.html", title:"Arabic vs English Crypto Marketing: Why Bilingual Campaigns Win in UAE", excerpt:"Why Arabic-first campaigns generate lower CAC and higher LTV, and how to build them without translation shortfalls.", topic:"Content Marketing", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"crypto-brand-trust-2026.html", title:"How to Build a Crypto Brand That Earns Trust in 2026", excerpt:"Post-collapse, trust is the primary conversion factor. The brand-building framework that makes sceptical investors choose you.", topic:"Branding", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"tiktok-marketing-crypto-brands.html", title:"TikTok Marketing for Crypto Brands: Strategy, Compliance, and Creative", excerpt:"How crypto brands use TikTok organic and influencer content to build audiences they cannot reach through paid channels.", topic:"Social Media", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"crypto-community-led-growth.html", title:"Community-Led Growth for Crypto Exchanges: The Retention Engine", excerpt:"How crypto exchanges build communities that reduce churn, generate referrals, and create word-of-mouth that paid media cannot buy.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80", date:"May 2026", read:"12 min" },
+
+  // ── BLOQUE 3: DeFi / WEB3 (5 artículos) ──
+  { file:"defi-protocol-marketing-non-technical.html", title:"How to Market a DeFi Protocol to Non-Technical Users", excerpt:"Translating protocol complexity into user-facing clarity — the messaging, content, and channel strategy for DeFi mainstream adoption.", topic:"Content Marketing", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"token-launch-marketing-playbook.html", title:"The Token Launch Marketing Playbook: Pre, During, and Post", excerpt:"The 90-day marketing timeline for a token launch — community building, KOL strategy, exchange listing announcements, and post-launch retention.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1642543492481-44e81e3914a7?w=600&q=80", date:"May 2026", read:"14 min" },
+  { file:"web3-content-strategy-pre-launch.html", title:"Web3 Content Strategy Before You Launch: Building Demand Before Day One", excerpt:"What to publish, where, and when — to arrive at launch with an audience already waiting.", topic:"Content Marketing", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"twitter-x-web3-growth-2026.html", title:"Twitter/X Growth Strategy for Web3 Projects in 2026", excerpt:"Crypto Twitter is still the Web3 distribution channel. The posting strategy, engagement tactics, and account growth playbook.", topic:"Social Media", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"nft-marketing-2026.html", title:"NFT Marketing in 2026: What Actually Works After the Hype", excerpt:"The post-hype NFT marketing reality — what the projects growing in 2026 are doing vs the 2021 playbook.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?w=600&q=80", date:"May 2026", read:"12 min" },
+
+  // ── BLOQUE 4: CRYPTO PAYMENTS (3 artículos) ──
+  { file:"dubai-merchants-crypto-payments.html", title:"How to Get Dubai Merchants to Accept Crypto Payments", excerpt:"The merchant acquisition playbook — which verticals to target first, how to handle every objection, and 48-hour onboarding.", topic:"Lead Generation", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"b2b-crypto-payment-marketing.html", title:"B2B Marketing for Crypto Payment Companies: How to Win Enterprise Clients", excerpt:"CFO messaging, multi-stakeholder presentations, pilot structure, and the content that moves compliance buyers to yes.", topic:"Lead Generation", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"crypto-payment-funnel-gcc.html", title:"How to Build a Sales Funnel for Crypto Payment Adoption in GCC", excerpt:"The full-funnel strategy from awareness to signed contract — with UAE, Saudi Arabia, and Qatar market-specific adaptations.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80", date:"May 2026", read:"12 min" },
+
+  // ── BLOQUE 5: KYC / COMPLIANCE (2 artículos) ──
+  { file:"kyc-aml-marketing-uae.html", title:"Marketing for KYC and AML Companies in UAE: How to Win Enterprise Clients", excerpt:"The B2B marketing playbook for RegTech providers — CRO and MLRO buyer personas, regulatory content strategy, roundtable model.", topic:"Lead Generation", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"vara-compliance-marketing-opportunity.html", title:"How VARA Compliance Creates a Marketing Opportunity in Dubai", excerpt:"VARA licensing as your primary competitive advantage — where to feature it, how to message it, and the content strategy that works.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1642543492481-44e81e3914a7?w=600&q=80", date:"May 2026", read:"11 min" },
+
+  // ── BLOQUE 6: DUBAI / GCC CROSSOVER (4 artículos) ──
+  { file:"dubai-prop-trading-crypto-hub-2026.html", title:"Dubai as a Hub for Prop Trading and Crypto: The Marketing Opportunity 2026", excerpt:"Why Dubai's demographics, regulation, and tax conditions create the world's most concentrated financial marketing opportunity.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"financial-products-marketing-uae-restrictions.html", title:"Financial Products Marketing in UAE: Navigating Meta, Google and TikTok Restrictions", excerpt:"Platform-by-platform — what is allowed, what gets ads rejected, and the creative framework for compliant campaigns at scale.", topic:"Paid Media", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"high-value-traders-audience-segmentation.html", title:"How to Target High-Value Traders Online: Audience Segmentation Guide", excerpt:"The three high-value trader segments, how to build and target them on each platform, and the lookalike architecture that compounds.", topic:"Analytics & Data", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"whatsapp-financial-services-uae.html", title:"The Role of WhatsApp in Financial Services Marketing in UAE", excerpt:"97% penetration, 90%+ open rates, 4× higher conversion than email — the full WhatsApp strategy for financial brands.", topic:"Social Media", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80", date:"May 2026", read:"12 min" },
+
+  // ── BLOQUE 7: FUNA AUTHORITY (3 artículos) ──
+  { file:"crypto-prop-trading-marketing-failures.html", title:"Why Most Crypto and Prop Trading Companies Fail at Marketing", excerpt:"The eight patterns that destroy financial brand marketing budgets — and the systematic fixes that transform each one.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80", date:"May 2026", read:"13 min" },
+  { file:"funa-framework-financial-marketing-dubai.html", title:"Funa's Framework for Marketing Financial Products in Dubai", excerpt:"The five-phase system — audit, foundations, testing, scaling, compounding — that we use for every financial brand engagement.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"prop-firm-crypto-marketing-spend-2026.html", title:"How Much Should a Prop Firm or Crypto Company Spend on Marketing in 2026", excerpt:"Definitive budget guide — spend levels, channel allocation, CAC/LTV benchmarks, and the formulas for your optimal investment.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=600&q=80", date:"May 2026", read:"14 min" },
+
+  // ── BLOQUE 8: REAL ESTATE (11 artículos) ──
+  { file:"real-estate-marketing-dubai-2026.html", title:"Real Estate Marketing in Dubai 2026: The Complete Agency Guide", excerpt:"Bayut, Meta, Google, YouTube, WhatsApp CRM — the full digital stack for Dubai real estate agencies and developers.", topic:"Lead Generation", industry:"Real Estate", img:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80", date:"May 2026", read:"14 min" },
+  { file:"meta-ads-off-plan-property-dubai.html", title:"Meta Ads for Off-Plan Property in Dubai: The Full Strategy", excerpt:"Targeting international buyers, creative that converts, and the WhatsApp funnel that turns leads into booked viewings.", topic:"Paid Media", industry:"Real Estate", img:"https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80", date:"May 2026", read:"13 min" },
+  { file:"whatsapp-crm-real-estate-dubai.html", title:"WhatsApp CRM for Dubai Real Estate: Converting Leads to Viewings", excerpt:"Automated qualification flows, broker scripts, and follow-up sequences that convert cold enquiries to booked viewings in under 24 hours.", topic:"Lead Generation", industry:"Real Estate", img:"https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"multilingual-real-estate-marketing-dubai.html", title:"Multilingual Real Estate Marketing in Dubai: Reaching Indian, Russian and British Buyers", excerpt:"How to run multilingual property campaigns targeting the three highest-value international buyer segments in Dubai.", topic:"Content Marketing", industry:"Real Estate", img:"https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80", date:"May 2026", read:"13 min" },
+  { file:"targeting-indian-buyers-dubai-property.html", title:"Targeting Indian Property Buyers in Dubai: The Complete Marketing Guide", excerpt:"Dubai's largest international segment — platforms, ROI messaging, and WhatsApp conversion flows that convert Indian investors.", topic:"Lead Generation", industry:"Real Estate", img:"https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80", date:"May 2026", read:"13 min" },
+  { file:"targeting-russian-buyers-dubai-property.html", title:"Targeting Russian Property Buyers in Dubai: Strategy for 2026", excerpt:"Telegram strategy, Russian-language Meta campaigns, and safe-haven messaging that converts Russian buyers in 2026.", topic:"Lead Generation", industry:"Real Estate", img:"https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"real-estate-seo-dubai.html", title:"SEO for Dubai Real Estate: Ranking for High-Intent Property Searches", excerpt:"The organic search strategy for sustainable qualified lead flow — keyword clusters, content architecture, local SEO.", topic:"SEO & Search", industry:"Real Estate", img:"https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"youtube-real-estate-dubai.html", title:"YouTube Marketing for Dubai Real Estate: Area Guides, Tours and Investor Content", excerpt:"How Dubai real estate agencies and developers use YouTube to build authority and drive international buyer enquiries.", topic:"Content Marketing", industry:"Real Estate", img:"https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"real-estate-tiktok-dubai.html", title:"TikTok for Dubai Real Estate: How Agents Are Winning in 2026", excerpt:"How agents build audiences of tens of thousands and convert TikTok viewers into property enquiries.", topic:"Social Media", industry:"Real Estate", img:"https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"real-estate-google-ppc-dubai.html", title:"Google PPC for Dubai Real Estate: Search Campaigns That Generate Qualified Buyer Leads", excerpt:"Keyword architecture, campaign structure, and landing pages that convert high-intent search traffic into booked viewings.", topic:"Paid Media", industry:"Real Estate", img:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"real-estate-marketing-budget-dubai.html", title:"How Much Should a Dubai Real Estate Agency Spend on Marketing in 2026", excerpt:"Spend levels, channel allocation, CPL benchmarks, and the formulas for calculating your optimal marketing investment.", topic:"Growth Strategy", industry:"Real Estate", img:"https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=600&q=80", date:"May 2026", read:"13 min" },
+
+  // ── BLOQUE 9: HEALTHCARE (10 artículos) ──
+  { file:"healthcare-marketing-compliance-dubai.html", title:"Healthcare Marketing Compliance in Dubai: What Clinics Need to Know", excerpt:"DHA advertising regulations, prohibited claims, and the compliance framework all Dubai healthcare marketing must follow.", topic:"Growth Strategy", industry:"Healthcare", img:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"google-ppc-clinics-dubai.html", title:"Google PPC for Dubai Clinics: How to Get Patients Searching for Your Services", excerpt:"Search campaigns for medical clinics — specialty targeting, DHA-compliant ad copy, and landing pages that convert health seekers.", topic:"Paid Media", industry:"Healthcare", img:"https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"arabic-health-content-dubai.html", title:"Arabic Health Content Marketing in Dubai: The Gap Most Clinics Are Missing", excerpt:"Arabic health content reaches UAE national and Arab expat patients at dramatically lower competition than English content.", topic:"Content Marketing", industry:"Healthcare", img:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"doctor-personal-branding-dubai.html", title:"Doctor Personal Branding in Dubai: Building Authority That Drives Referrals", excerpt:"How Dubai doctors build personal brands on LinkedIn and Instagram that drive patient referrals and media presence.", topic:"Branding", industry:"Healthcare", img:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"before-after-content-clinics-dubai.html", title:"Before and After Content for Dubai Clinics: What Is Legal and What Gets You Fined", excerpt:"DHA rules on before/after medical imagery — what is permitted and the compliant alternatives for aesthetic clinics.", topic:"Content Marketing", industry:"Healthcare", img:"https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"medical-tourism-marketing-dubai.html", title:"Medical Tourism Marketing for Dubai: Attracting International Patients", excerpt:"How Dubai hospitals and specialists attract international patients — platform mix, language strategy, and trust-building content.", topic:"Lead Generation", industry:"Healthcare", img:"https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"patient-referral-marketing-clinics-dubai.html", title:"Patient Referral Marketing for Dubai Clinics: Building Word-of-Mouth That Compounds", excerpt:"Structured referral programs — GP networks to patient advocates — that generate sustainable low-cost patient acquisition.", topic:"Growth Strategy", industry:"Healthcare", img:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"whatsapp-patient-communication-dubai.html", title:"WhatsApp for Dubai Healthcare: Patient Communication, Reminders, and Retention", excerpt:"Appointment reminders, post-treatment follow-up, and patient retention — automation flows and compliance rules.", topic:"Email Marketing", industry:"Healthcare", img:"https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"google-reviews-clinics-dubai.html", title:"How Dubai Clinics Build and Manage Google Reviews: The Reputation Strategy", excerpt:"The systematic approach to generating authentic reviews and the reputation strategy that drives new patient acquisition.", topic:"SEO & Search", industry:"Healthcare", img:"https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"influencer-marketing-healthcare-dubai.html", title:"Influencer Marketing for Dubai Healthcare Brands: Strategy, Compliance, and Results", excerpt:"How healthcare and wellness brands work with creators compliantly — DHA rules, creator selection, and the brief that works.", topic:"Influencer Marketing", industry:"Healthcare", img:"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80", date:"May 2026", read:"12 min" },
+
+  // ── BLOQUE 10: F&B (10 artículos) ──
+  { file:"restaurant-marketing-dubai-2026.html", title:"Restaurant Marketing in Dubai 2026: The Complete Digital Strategy", excerpt:"Instagram, TikTok, Google Maps, Talabat, Deliveroo, WhatsApp loyalty — the full playbook for Dubai restaurants.", topic:"Growth Strategy", industry:"F&B & Hospitality", img:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80", date:"May 2026", read:"14 min" },
+  { file:"tiktok-restaurant-marketing-dubai.html", title:"TikTok for Dubai Restaurants: How Food Content Goes Viral and Drives Bookings", excerpt:"Content formats, posting strategy, viral hooks that work for food content, and the path from view to reservation.", topic:"Social Media", industry:"F&B & Hospitality", img:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"google-maps-restaurant-dubai.html", title:"Google Maps for Dubai Restaurants: How to Rank and Convert Local Searches", excerpt:"Google Business Profile optimisation — how to rank for near-me searches and convert local searchers into diners.", topic:"SEO & Search", industry:"F&B & Hospitality", img:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"talabat-deliveroo-marketing-dubai.html", title:"Talabat and Deliveroo Marketing for Dubai Restaurants: How to Win on the Platforms", excerpt:"Listing optimisation, promotion strategy, photography, and the decisions that affect algorithmic ranking on delivery platforms.", topic:"Ecommerce", industry:"F&B & Hospitality", img:"https://images.unsplash.com/photo-1526367790999-0150786686a2?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"ramadan-marketing-fb-dubai.html", title:"Ramadan Marketing for Dubai F&B Brands: The Iftar and Suhoor Playbook", excerpt:"When to start, which formats work, the iftar deal structure that maximises covers, and Arabic content for the season.", topic:"Content Marketing", industry:"F&B & Hospitality", img:"https://images.unsplash.com/photo-1532902376070-3db8ec8c5e0e?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"food-influencer-marketing-dubai.html", title:"Food Influencer Marketing in Dubai: How to Work with Creators That Drive Covers", excerpt:"How to identify, brief, and measure food influencer partnerships — and track influence on actual reservations.", topic:"Influencer Marketing", industry:"F&B & Hospitality", img:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"instagram-restaurant-marketing-dubai.html", title:"Instagram Marketing for Dubai Restaurants: From Followers to Full Tables", excerpt:"Content strategy, Reels, UGC amplification, and the posting cadence that grows engagement and fills tables.", topic:"Social Media", industry:"F&B & Hospitality", img:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"whatsapp-loyalty-fb-dubai.html", title:"WhatsApp Loyalty Programs for Dubai F&B: Building the Customer Base That Returns", excerpt:"The broadcast list strategy, offer cadence, and retention sequences that turn one-time visitors into regulars.", topic:"Email Marketing", industry:"F&B & Hospitality", img:"https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"dark-kitchen-marketing-dubai.html", title:"Dark Kitchen Marketing in Dubai: How Ghost Brands Win on Talabat and Deliveroo", excerpt:"Platform optimisation, multi-brand strategy, photography, menu design, and paid media for dark kitchen brands.", topic:"Ecommerce", industry:"F&B & Hospitality", img:"https://images.unsplash.com/photo-1526367790999-0150786686a2?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"fb-marketing-budget-dubai.html", title:"How Much Should a Dubai Restaurant Spend on Marketing in 2026", excerpt:"Spend levels, channel allocation, cost-per-reservation benchmarks, and the formulas for your optimal restaurant marketing investment.", topic:"Growth Strategy", industry:"F&B & Hospitality", img:"https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=600&q=80", date:"May 2026", read:"13 min" },
+
+  // ── BLOQUE 11: E-COMMERCE (10 artículos) ──
+  { file:"tiktok-shop-uae-ecommerce.html", title:"TikTok Shop UAE: How E-commerce Brands Are Selling Directly in 2026", excerpt:"Product setup, creator partnerships, live selling strategy, and the conversion data from TikTok Shop in UAE.", topic:"Social Media", industry:"E-commerce", img:"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"dtc-brand-building-uae.html", title:"Building a DTC Brand in UAE: From First Sale to Loyal Customer Base", excerpt:"Positioning, acquisition channels, retention strategy, and the brand infrastructure that works in the Gulf market.", topic:"Branding", industry:"E-commerce", img:"https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"meta-advantage-plus-ecommerce-uae.html", title:"Meta Advantage+ for UAE E-commerce: How to Use AI-Optimised Campaigns", excerpt:"Setup, product catalogue optimisation, creative strategy, and performance benchmarks for healthy UAE e-commerce campaigns.", topic:"Paid Media", industry:"E-commerce", img:"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"micro-creators-ecommerce-uae.html", title:"Micro Creator Strategy for UAE E-commerce: High ROI at Low Budget", excerpt:"Creator selection, brief structure, CPA deals, and the measurement framework that scales what works.", topic:"Influencer Marketing", industry:"E-commerce", img:"https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"email-whatsapp-automation-ecommerce-uae.html", title:"Email and WhatsApp Automation for UAE E-commerce: The Retention Revenue Engine", excerpt:"Abandoned cart, post-purchase, win-back, and VIP sequences that generate 25–40% of e-commerce revenue.", topic:"Email Marketing", industry:"E-commerce", img:"https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"tabby-tamara-ecommerce-marketing-uae.html", title:"How to Use Tabby and Tamara to Increase UAE E-commerce Conversions", excerpt:"How to market BNPL availability to reduce cart abandonment and increase AOV — the conversion tool most brands underuse.", topic:"Ecommerce", industry:"E-commerce", img:"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"shopify-woocommerce-uae-ecommerce.html", title:"Shopify vs WooCommerce for UAE E-commerce: Which Platform Wins in 2026", excerpt:"Platform comparison across payment gateways, Arabic RTL, UAE integrations, and total cost of ownership.", topic:"Desarrollo Web & Apps", industry:"E-commerce", img:"https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"ecommerce-seo-uae.html", title:"SEO for UAE E-commerce: Ranking Product and Category Pages for Gulf Buyers", excerpt:"Keyword research, page optimisation, product page best practices, and content that ranks and converts in UAE.", topic:"SEO & Search", industry:"E-commerce", img:"https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"ramadan-ecommerce-strategy-uae.html", title:"Ramadan E-commerce Strategy for UAE: How to Win the Biggest Shopping Season", excerpt:"Pre-Ramadan preparation, campaign timing, offer structure, and post-Ramadan retention strategy.", topic:"Growth Strategy", industry:"E-commerce", img:"https://images.unsplash.com/photo-1532902376070-3db8ec8c5e0e?w=600&q=80", date:"May 2026", read:"12 min" },
+  { file:"ugc-strategy-ecommerce-uae.html", title:"UGC Strategy for UAE E-commerce: How User-Generated Content Drives Sales", excerpt:"How to generate, collect, and amplify UGC to build social proof, reduce CAC, and increase conversion rates across all channels.", topic:"Content Marketing", industry:"E-commerce", img:"https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80", date:"May 2026", read:"12 min" },
+
+
+
+  { file:"best-crypto-trading-platforms-uae-2026.html", title:"The Best Crypto Trading Platforms in UAE for 2026", excerpt:"Binance, OKX, Bybit, Rain — a complete comparison of the top crypto trading platforms available in UAE, including fees, features, and VARA regulatory status.", topic:"Negocios", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=600&q=80", date:"May 2026", read:"11 min" },
+  { file:"mgx-binance-inversion-golfo.html", title:"La Inversión de MGX en Binance: Impacto en el Golfo y Oportunidades de Marketing", excerpt:"El deal Abu Dhabi-Binance y su impacto directo en negocios, inversión y marketing digital en la región del Golfo Pérsico.", topic:"Negocios", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1642543492481-44e81e3914a7?w=600&q=80", date:"May 2026", read:"8 min" },
+  { file:"mgx-binance-investment-gulf-marketing.html", title:"MGX Binance Investment: What It Means for Marketing in the Gulf Region", excerpt:"How the MGX-Binance $2 billion deal reshapes the crypto and financial services marketing landscape across UAE and GCC in 2026.", topic:"Growth Strategy", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80", date:"May 2026", read:"9 min" },
+  { file:"web3-defi-nfts-uae-marketing-2026.html", title:"Web3, DeFi and NFTs in UAE: The Marketing Strategy for 2026", excerpt:"RAK DAO, DeFi protocols, and NFTs as brand and marketing tools in Dubai — the complete Web3 marketing playbook for UAE-based projects.", topic:"Content Marketing", industry:"Finance & Trading", img:"https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?w=600&q=80", date:"May 2026", read:"10 min" },
+];
+
+// Add index for newest/oldest sort (higher index = newer)
+articles.forEach((a, i) => { a._idx = i; });
+
+// ── STATE ──
+const TOPICS = ["All","Social Media","Paid Media","SEO & Search","Content Marketing","Email Marketing","AI Marketing","Branding","Lead Generation","Growth Strategy","Influencer Marketing","Analytics & Data","Ecommerce","Desarrollo Web & Apps","Negocios"];
+const INDUSTRIES = ["All","Real Estate","E-commerce","F&B & Hospitality","Retail & Fashion","Finance & Trading","iGaming","Healthcare","Tech & SaaS","Professional Services","Luxury & Lifestyle","Beauty"];
+
+let activeTopic = "All";
+let activeIndustry = "All";
+let searchQuery = "";
+let sortMode = "newest"; // newest | oldest | az | za
+
+// ── SEARCH ──
+function handleSearch(val) {
+  searchQuery = val.trim().toLowerCase();
+  document.getElementById('search-clear').style.display = val ? 'block' : 'none';
+  renderAll();
+}
+function clearSearch() {
+  document.getElementById('search-input').value = '';
+  searchQuery = '';
+  document.getElementById('search-clear').style.display = 'none';
+  renderAll();
+}
+
+// ── SORT ──
+function setSort(mode) {
+  sortMode = mode;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.toggle('active', b.dataset.sort === mode));
+  renderAll();
+}
+
+// ── FILTER COUNTS ──
+function countTopic(v) { return v==="All" ? articles.length : articles.filter(a=>a.topic===v).length; }
+function countIndustry(v) { return v==="All" ? articles.length : articles.filter(a=>a.industry===v).length; }
+
+// ── BUILD FILTERS ──
+function buildFilters() {
+  const topicEl = document.getElementById('topic-filters');
+  const industryEl = document.getElementById('industry-filters');
+  TOPICS.forEach(t => {
+    const count = countTopic(t);
+    if(count === 0 && t !== "All") return;
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn' + (t===activeTopic?' active':'');
+    btn.dataset.value = t; btn.dataset.type = 'topic';
+    btn.innerHTML = t + '<span class="filter-count">'+count+'</span>';
+    btn.onclick = () => { activeTopic = t; renderAll(); };
+    topicEl.appendChild(btn);
+  });
+  INDUSTRIES.forEach(i => {
+    const count = countIndustry(i);
+    if(count === 0 && i !== "All") return;
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn' + (i===activeIndustry?' active':'');
+    btn.dataset.value = i; btn.dataset.type = 'industry';
+    btn.innerHTML = i + '<span class="filter-count">'+count+'</span>';
+    btn.onclick = () => { activeIndustry = i; renderAll(); };
+    industryEl.appendChild(btn);
+  });
+}
+
+// ── GET FILTERED + SORTED ──
+function getFiltered() {
+  let result = articles.filter(a => {
+    const topicMatch = activeTopic === "All" || a.topic === activeTopic;
+    const industryMatch = activeIndustry === "All" || a.industry === activeIndustry || a.industry === "All";
+    const searchMatch = !searchQuery ||
+      a.title.toLowerCase().includes(searchQuery) ||
+      a.excerpt.toLowerCase().includes(searchQuery) ||
+      a.topic.toLowerCase().includes(searchQuery) ||
+      a.industry.toLowerCase().includes(searchQuery);
+    return topicMatch && industryMatch && searchMatch;
+  });
+
+  // Sort
+  if(sortMode === "newest") result = result.sort((a,b) => b._idx - a._idx);
+  else if(sortMode === "oldest") result = result.sort((a,b) => a._idx - b._idx);
+  else if(sortMode === "az") result = result.sort((a,b) => a.title.localeCompare(b.title));
+  else if(sortMode === "za") result = result.sort((a,b) => b.title.localeCompare(a.title));
+
+  return result;
+}
+
+// ── RENDER CARDS ──
+function renderCards() {
+  const grid = document.getElementById('blog-grid');
+  const noResults = document.getElementById('no-results');
+  const filtered = getFiltered();
+
+  Array.from(grid.children).forEach(c => { if(!c.id) c.remove(); });
+
+  if(filtered.length === 0) {
+    noResults.classList.add('visible');
+  } else {
+    noResults.classList.remove('visible');
+    filtered.forEach(a => {
+      const card = document.createElement('a');
+      card.href = '/' + a.file;
+      card.className = 'blog-card';
+      card.innerHTML = `
+        <div class="card-thumb">
+          <img src="${a.img}" alt="${a.title}" loading="lazy">
+          <div class="card-topic-badge">${a.topic}</div>
+          ${a.industry !== "All" ? `<div class="card-industry-badge">${a.industry}</div>` : ''}
+          <div class="card-read-time">${a.read}</div>
+        </div>
+        <div class="card-body">
+          <div class="card-date">${a.date}</div>
+          <div class="card-title">${a.title}</div>
+          <div class="card-excerpt">${a.excerpt}</div>
+          <div class="card-read">Read Article</div>
+        </div>`;
+      grid.insertBefore(card, noResults);
+    });
+  }
+
+  document.getElementById('showing-count').textContent = filtered.length;
+}
+
+function updateFilterButtons() {
+  document.querySelectorAll('#topic-filters .filter-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.value === activeTopic));
+  document.querySelectorAll('#industry-filters .filter-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.value === activeIndustry));
+}
+
+function renderAll() {
+  updateFilterButtons();
+  renderCards();
+}
+
+function init() {
+  document.getElementById('total-count').textContent = articles.length;
+  buildFilters();
+  renderCards();
+}
+
+if(document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+</script>
+
+<!-- DUBAI MARKETING PULSE -->
+<section id="newsletter" style="background:#0a0a0a;border-top:1px solid rgba(200,255,0,0.08);padding:80px 64px;">
+  <style>
+    #nl-wrap{max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+    .nl-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:#C8FF00;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+    .nl-eyebrow::before{content:'';display:block;width:20px;height:2px;background:#C8FF00;}
+    .nl-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,64px);line-height:0.92;color:#fff;margin-bottom:16px;}
+    .nl-title span{color:#C8FF00;}
+    .nl-desc{font-size:14px;color:rgba(255,255,255,0.45);font-weight:300;line-height:1.7;margin-bottom:20px;}
+    .nl-bullets{list-style:none;padding:0;margin:0;}
+    .nl-bullets li{font-size:13px;color:rgba(255,255,255,0.5);padding:7px 0 7px 18px;border-bottom:1px solid rgba(255,255,255,0.04);position:relative;}
+    .nl-bullets li::before{content:'→';color:#C8FF00;position:absolute;left:0;font-weight:700;font-size:11px;}
+    .nl-form-box{background:#111;border:1px solid rgba(200,255,0,0.2);padding:32px;}
+    .nl-form-title{font-family:'Bebas Neue',sans-serif;font-size:28px;color:#fff;margin-bottom:4px;letter-spacing:0.02em;}
+    .nl-form-sub{font-size:12px;color:rgba(255,255,255,0.4);font-weight:300;margin-bottom:24px;}
+    #nl-email{
+      display:block;width:100%;
+      background:#000;
+      border:1px solid rgba(255,255,255,0.15);
+      color:#fff;
+      font-family:'Barlow Condensed',sans-serif;
+      font-size:14px;letter-spacing:0.1em;
+      padding:14px 16px;
+      box-sizing:border-box;
+      margin-bottom:8px;
+      outline:none;
+    }
+    #nl-email::placeholder{color:rgba(255,255,255,0.3);}
+    #nl-email:focus{border-color:rgba(200,255,0,0.5);}
+    #nl-submit{
+      display:block;width:100%;
+      background:#C8FF00;color:#000;
+      font-family:'Barlow Condensed',sans-serif;
+      font-size:12px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;
+      border:none;padding:14px 24px;
+      cursor:pointer;
+    }
+    #nl-submit:hover{background:#fff;}
+    #nl-success{display:none;padding:12px 16px;margin-top:12px;background:rgba(200,255,0,0.08);border:1px solid rgba(200,255,0,0.3);color:#C8FF00;font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:0.06em;}
+    #nl-error{display:none;padding:12px 16px;margin-top:12px;background:rgba(255,68,68,0.08);border:1px solid rgba(255,68,68,0.3);color:#ff6666;font-family:'Barlow Condensed',sans-serif;font-size:13px;}
+    @media(max-width:768px){
+      #nl-wrap{grid-template-columns:1fr;gap:40px;}
+      section#newsletter{padding:60px 24px;}
+      .nl-form-box{padding:24px;}
+    }
+  </style>
+
+  <div id="nl-wrap">
+    <!-- LEFT -->
+    <div>
+      <div class="nl-eyebrow">Free Monthly Report</div>
+      <div class="nl-title">DUBAI<br>MARKETING<br><span>PULSE</span></div>
+      <p class="nl-desc">The monthly report for businesses and marketers in the UAE. Real data, real trends, zero fluff.</p>
+      <ul class="nl-bullets">
+        <li>UAE market trends &amp; platform updates</li>
+        <li>What's working in Dubai right now</li>
+        <li>Industry benchmarks &amp; ad costs</li>
+        <li>One actionable tip per issue</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: Custom form posting to Brevo -->
+    <div class="nl-form-box">
+      <div class="nl-form-title">Get the Report</div>
+      <div class="nl-form-sub">Free. Every month. No spam, ever.</div>
+      <input type="email" id="nl-email" placeholder="YOUR EMAIL ADDRESS" required/>
+      <button id="nl-submit" type="button">GET THE REPORT →</button>
+      <div id="nl-success">✓ Welcome aboard — first report coming soon.</div>
+      <div id="nl-error">✗ Please enter a valid email address.</div>
+    </div>
+  </div>
+
+  <script>
+  document.getElementById('nl-submit').addEventListener('click', function(){
+    var email = document.getElementById('nl-email').value.trim();
+    var success = document.getElementById('nl-success');
+    var error = document.getElementById('nl-error');
+    var btn = document.getElementById('nl-submit');
+
+    // Basic email validation
+    if(!email || !/^[^@]+@[^@]+\.[^@]+$/.test(email)){
+      error.style.display='block';
+      success.style.display='none';
+      return;
+    }
+
+    error.style.display='none';
+    btn.textContent='SENDING...';
+    btn.style.opacity='0.7';
+    btn.disabled=true;
+
+    // Post to Brevo via fetch
+    var formData = new FormData();
+    formData.append('EMAIL', email);
+    formData.append('email_address_check', '');
+    formData.append('locale', 'en');
+
+    fetch('https://6da8ce06.sibforms.com/serve/MUIFAKvRRiRAybrN8uvNV0DwhY-tUCJz8-xC62AKjiV_l2oEmMqCvEf0ClNvfviVvpIO_51Hsy8UTyDTziZgYW1bNQpNE7BOhm_OTshh96R82t5ERMSAwujxPj8nxkbPiYFsPIoYz0LoFhxhJGRC9_avENtjYtIkDCIEIZ7eIImfZ6iNKoGQhCx8DAzkkLgXolaTJ95yEwKSUNUbgQ==', {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    }).then(function(){
+      success.style.display='block';
+      btn.style.display='none';
+      document.getElementById('nl-email').style.display='none';
+    }).catch(function(){
+      // no-cors always goes to catch but still submits — show success
+      success.style.display='block';
+      btn.style.display='none';
+      document.getElementById('nl-email').style.display='none';
+    });
+  });
+
+  // Also trigger on Enter key
+  document.getElementById('nl-email').addEventListener('keydown', function(e){
+    if(e.key === 'Enter') document.getElementById('nl-submit').click();
+  });
+  </script>
+</section>
+
+</body>
+</html>
