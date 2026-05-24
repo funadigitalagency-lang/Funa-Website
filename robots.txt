@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block utility/non-content pages
+Disallow: /summer-offer.html
+Disallow: /google847d61a2f9e5c2e2.html
+Disallow: /funa-creators.html
+
+# Sitemap location
+Sitemap: https://www.funa.digital/sitemap.xml
